@@ -1,0 +1,13 @@
+User-agent: * 
+
+Allow: / 
+
+Disallow: /vendor /includes 
+Allow: /vendor/*.js
+Allow: /includes/*.js
+Allow: /vendor/*.css
+Allow: /includes/*.css
+
+Sitemap: https://site.com.ua/sitemap_index.xml
+Sitemap: https://site.com.ua/sitemap-image.xml
+Sitemap: https://site.com.ua/sitemap-video.xml
