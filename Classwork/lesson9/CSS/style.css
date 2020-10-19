@@ -1,0 +1,30 @@
+*{
+    padding:0;
+    margin:0;
+    }
+    #fonBlock{
+        background-color:lightslategrey;
+    }
+    h1{
+        color: chartreuse;
+        font-size: 35px;
+    }
+    .box{
+        background-color: darkblue;
+    }
+    .first-box{
+        background-color: darkred;
+    }
+    .media-box{
+        background-color: deeppink;
+    }
+    .last-box{
+        background-color: linen;
+    }
+    h2{
+        font-size: 15px;
+    }
+    p,
+    h2{
+        color: rgb(51, 48, 47);
+    }

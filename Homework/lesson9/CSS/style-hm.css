@@ -1,0 +1,19 @@
+h1{
+    background-color: indigo;
+    font-size:25px;
+    
+}
+.box h2{
+    color:red;
+}
+
+.boxing p{
+font-size: 16px;
+color: darkgreen;
+}
+.second-box h2{
+    color: gray;
+}
+.second-box p{
+    font-size: 14px;
+}
