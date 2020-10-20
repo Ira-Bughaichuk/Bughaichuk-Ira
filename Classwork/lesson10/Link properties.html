@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Link properties</title>
+</head>
+<style>
+   .main{
+	   padding:100px 0px;
+	   }
+	 .hover_link{
+		 width:200px;
+		 background-color:#31C3B0;
+		 text-align:center;
+		 height:30px;
+		 display:block;
+		 text-decoration:none;
+		 }
+		.hover_link:hover{
+			background:#86E4B1;
+			color:#F11B1F;
+			}
+		.link:link{
+			color:#30E21C;
+			text-align:center;
+			display:block;
+			text-decoration:none;
+			}
+		a:visited{
+			color:#ADAF24;
+			}
+		ul.menu li a.active,
+		ul.menu li a:active{
+			color:#DF75C8;
+			display:block;
+			}
+		a:focus{
+			border:solid 2px #000;
+			}
+			
+</style>
+<body>
+ <div class="main">
+     <a href="/" class="hover_link">перейти к hover</a>
+     <a href="/" class="link">Link</a>
+     
+     <ul class="menu">
+        <li class="item"><a href="#" class="link-item">Главная</a></li>
+        <li class="item"><a href="#" class="link-item active">О нас</a></li>
+        <li class="item"><a href="#" class="link-item">Контакты</a></li>
+     </ul>
+ </div>
+</body>
+</html>
