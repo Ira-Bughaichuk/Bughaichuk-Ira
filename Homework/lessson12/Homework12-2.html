@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework12-2</title>
+</head>
+<style>
+    .wrapper-box{
+	position:relative;
+	}
+.container{
+	width:1000px;
+    margin:0 auto;
+    height:1000px;
+	
+	}
+    .box{
+        width:300px;
+	    height:150px;   
+	    text-align:center;
+	    box-sizing:border-box;
+        background-color: rosybrown;
+    
+	
+    }
+    .box1{
+        position:static;
+        top: 20px;
+    	left: 20px;
+        width:200px;
+	    height:100px;
+        font-size: 12px;
+        border: solid;
+        margin: 20px;
+        
+    }
+    
+    
+    .box2{
+        z-index: 1;
+        position: relative;
+
+        width:600px;
+	    height:150px;
+        border: solid;
+    }
+
+    .box3{
+        z-index: 2;
+        position:relative;
+        right: 10px;
+        bottom: 20px;
+        width:300px;
+	    height:150px;
+        border: solid;
+    }
+    .box-small{
+        width:80px;
+        height:60px;
+        background-color: blue;
+    }
+    .box4{
+        z-index: 3;
+        position:relative;
+        bottom: 155px;
+        left: 200px;
+        width:300px;
+	    height:200px;
+        border: solid;
+    }
+    .box5{
+        position:relative;
+        bottom:176px;
+        z-index: 4;
+        border: solid;
+    }
+    .box6{
+        position:relative;
+        bottom:260px;
+        left: 15px;
+        z-index: 5;
+        border: solid;
+    }
+    .box7{
+        position: fixed;
+        bottom:20px;
+	    top: 200px;
+        left: 800px;
+        
+        border: solid;
+        background-color: black;
+        color: blanchedalmond;
+    }
+    .box8{
+        position:relative;
+        width:300px;
+        height:50px;
+        bottom:300px;
+		
+        border: solid;
+        background-color: blue;
+    }
+    .box9{
+        position:relative;
+        width:280px;
+        height:20px;
+        bottom:320px;
+		z-index: 5;
+        left: 20px;
+        border: solid;
+        background-color: red; 
+    }
+    </style>
+    <body>
+        <div class="wrapper-box">
+            <div class="container">
+                <div class="box box1">
+                    <p> положення за замовчуванням статичне</p>
+                </div>
+                
+                <div class="box box2">
+                    <p> Цей елемент має відносне положення.  Відносна позиція означає, що цей елемент відображається відносно початкової позиції.  Переміщення його за допомогою властивостей верхнього, лівого, правого, нижнього не вплине на макет.</p>
+                    
+                </div>
+                <div class="box box3">
+                    <div class="box-small"><p> Simple div </p></div>
+                </div>
+                <div class="box box4">
+                    <p>Цей елемент має відносне положення.  Відносна позиція означає, що цей елемент відображається відносно початкової позиції.  Переміщення його за допомогою властивостей верхнього, лівого, правого, нижнього не вплине на макет.</p>
+                
+                </div>
+                <div class="box box5">
+                    <p>Цей елемент є відносним до z-індексу 2. </p>
+                </div>
+                <div class="box box6">
+                    <p> Це дочірнє також успадковує z-індекс, вони обидва відображаються cd над будь-яким іншим саморобком </p>
+                </div>
+                <div class="box box7">
+                    <p>Виправлена ​​позиція з властивостями зверху та зліва.  Цей div залишається на тому ж місці, навіть коли ви прокручуєте сторінку </p>
+                </div>
+                <div class="  box box8"></div>
+                <div class=" box box9"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>

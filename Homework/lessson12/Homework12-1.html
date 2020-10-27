@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework12</title>
+</head>
+
+
+<style>
+        
+    .box-all{
+
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .box{
+        position: absolute;
+        z-index: 9999;
+        background: #dcdcdc;
+        left:50%;
+        margin-left: -131px;
+        top:50%;
+        margin-top: -164px;
+        width: 262px;
+        height: 328px;
+        border: solid;
+        
+    }
+    .box h2{
+        font-size: 20px;
+        color:#ca574d;
+        text-align: center;
+        margin-top: 26px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+    }
+    .Input{
+        font-size: 15px;
+        color: #808080;
+        border: none;
+        width: 100%;
+        padding: 8px 0px 8px 15px;
+        outline:none;
+        margin-bottom: 15px;
+    }
+    .closed{
+        z-index: 999999;
+        position: absolute;
+        right:9px;
+        top:5px;
+        cursor: pointer;
+        color:#E81115;
+        font-weight: bold;
+    }
+    .closed:hover{
+        color:#000
+    }
+    form{
+        width: 200px;
+        padding:25px;
+    }
+    input{
+        display: block;
+        width: 100%;
+    }
+    button{
+        font-size: 15px;
+        color:#fff;
+        outline:none;
+        border: none;
+        width:214px;
+        background: red;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding-top: 9px;
+        padding-bottom: 10px;
+        cursor:pointer;
+    }
+
+    
+</style>
+
+<body> 
+    <div class="box-all">
+        <div class="box">
+            <h2>Ваш запрос</h2>
+            <span class="closed">X</span>
+
+            <form >
+            <input class="Input" type="text" name="Ім'я" placeholder="Ім'я"/>
+            <input class="Input" type="mail" name="E-mail" placeholder="E-mail"/>
+            <input class="Input" type="textarea" name="textarea" placeholder="Коментарій"/>
+            <button> Заказать </button>
+            </form>
+
+        </div>
+    </div>
+
+</body>

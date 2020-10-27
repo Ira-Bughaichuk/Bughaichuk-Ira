@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Position</title>
+</head>
+<style>
+.container{
+	width:900px;
+	margin:0 auto;
+	height:1000px;
+	}
+	.box{
+		position:relative;
+		width:200px;
+		height:200px;
+		background:#20B025;
+		border:#000 solid 10px;
+		margin:0 auto;
+		margin-bottom:30px;
+		}
+	.child-box{
+		width:80px;
+		height:80px;
+		background:#2D2C8C;
+		}
+	.child-box-static{
+		position:static;
+		}
+	.child-box-absolute{
+		position:absolute;
+		top: 20px;
+    	left: 20px;
+		}
+	.child-box-relative{
+		position:relative;
+		left: 50px;
+        top: 10%;
+		}
+	.box_fixed{
+		position:fixed;
+		bottom:0;
+		right:0;
+		}
+</style>
+<body>
+   <div class="container">
+      <div class="box_static box">
+      		<div class="child-box-static child-box"></div>
+      </div>
+      
+      <div class="box_absolute box">
+      		<div class="child-box-absolute child-box"></div>
+      </div>
+      
+      <div class="box_relative box">
+      		<div class="child-box-relative child-box"></div>
+      </div>
+      
+      <div class="box_fixed box">
+      		<div class="child-box-fixed child-box"></div>
+      </div>
+   </div>
+</body>
+</html>

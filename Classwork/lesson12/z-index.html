@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>z-index</title>
+</head>
+<style>
+.wrapper-box{
+	position:relative;
+	}
+.container{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+	}
+.box{
+	width:200px;
+	height:200px;
+	font-size:40px;
+	text-align:center;
+	box-sizing:border-box;
+	padding:20px;
+	margin:20px;
+	position:absolute
+	}
+.box1{
+	background:#24D1BB;
+	z-index:4;
+	}
+.box2{
+	background:#32A616;
+	    top: 47px;
+    left: 15px;
+	z-index:2;
+	}
+.box3{
+	background:#EB12CF;
+	    top: 109px;
+    left: 26px;
+	z-index:3;
+	}
+</style>
+<body>
+    <div class="wrapper-box">
+        <div class="container">
+        		<div class="box box1">1</div>
+                <div class="box box2">2</div>
+                <div class="box box3">3</div>
+        </div>
+    </div>
+</body>
+</html>
