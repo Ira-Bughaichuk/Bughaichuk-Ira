@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu-teacher</title>
+ <link href="vendor/fontawesome/css/all.min.css"  type="text/css" rel="stylesheet">
+<link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"  type="text/css" rel="stylesheet">
+<link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"  type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script><!--В первую очередь подключаем билиотеку-->
+<script type="text/javascript" src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script><!--Потом вторую карусель-->
+<script type="text/javascript" src="js/customs.js"></script><!--Третью подключаем наш js файл для настройки-->
+</head>
+<style>
+*{
+	margin:0;
+	padding:0;
+	}
+html,/*Для прижатия footer*/
+body{
+	height:100%;
+	}
+.for_page{/*Для прижатия footer*/
+	position:relative;
+	min-height:100%;
+	}
+.page{/*Для прижатия footer*/
+	    padding-bottom: 58px;
+	}
+.container{
+	width:1170px;
+	margin:0 auto;
+	}
+.fl{
+	float:left;
+	}
+.fr{
+	float:right;
+	}
+.clear{
+	clear:both;
+	}
+img{
+	max-width: 100%;
+    width: auto;
+    height: auto;
+	}
+.adress_main,
+.phone_main{
+	width:27%;
+	    padding-top: 25px;
+	}
+.clock_work{
+	width:25%;
+	text-align: center;
+    padding-top: 25px;
+	}
+.phone_main i,
+.adress_main i,
+.clock_work i{
+	font-size: 19px;
+    color: #7887b3;
+	    padding-right: 3px;
+	}
+.clock_work span{
+	}
+.logo{
+	width:20%;
+	}
+.header{
+	margin-top:15px;
+	}
+.phone_main a{
+	color:#333;
+	text-decoration:none;
+	}
+.phone_main a:hover{
+	color:#168BD4;
+	}
+.adress_main{
+	color:#333;
+	}
+.nav-menu{
+	width:100%;
+	background:#143353;
+	margin-top: 15px;
+	}
+ul.menu-main li.item-menu{
+	list-style:none;
+	float:left
+	}
+ul.menu-main li.item-menu a{
+	text-decoration:none;
+	color:#fff;
+	font-size:14px;
+	padding:20px 15px;
+	display: block;
+		}
+	ul.menu-main li.item-menu a:hover{
+		color:#E5DFDF;
+		}
+	ul.menu-main li.item-menu:nth-child(3){
+		position:relative;
+		}
+     ul.menu-main li.item-menu:nth-child(3) ul.child-menu-item{
+		 position:absolute;
+		     background: #143353;
+    width: 149px;
+	display:none;
+		 }
+ul.menu-main li.item-menu:nth-child(3):hover ul.child-menu-item{ /*ulдля того чтобы отобразился на третий li нужно класс после ховера указать*/
+			display:block;
+			}
+		 ul.menu-main li.item-menu ul.child-menu-item li{
+			float:inherit;
+			}
+		 ul.menu-main li.item-menu ul.child-menu-item li a{
+			padding: 9px 15px;
+			}
+	/*slide*/
+	.slide1{
+		background:url(img/slide1.jpg) no-repeat;
+		background-size:cover;
+		padding: 200px 0;
+		}
+	.slide2{
+		background:url(img/slide2.jpg) no-repeat;
+		background-size:cover;
+		    padding: 200px 0;
+		}
+	.item h2{
+		font-size:50px;
+		margin-bottom:20px;
+		}
+	.text_slider{
+		font-size:30px;
+		font-style:italic;
+		}
+	#home_slider.owl-carousel .owl-nav .owl-prev{
+		background:url(img/arrow_prev.png) no-repeat;
+		width:8px;
+		height:13px;
+		outline:none;
+		position:absolute;
+		    bottom: 300px;
+         left: 16px;
+		}
+	#home_slider.owl-carousel .owl-nav .owl-next{
+		background:url(img/arrow_next.png) no-repeat;
+		width:8px;
+		height:13px;
+		outline:none;
+		position:absolute;
+		    bottom: 300px;
+        right: 16px;
+		}
+	#home_slider.owl-carousel .owl-nav .owl-prev:hover,
+	#home_slider.owl-carousel .owl-nav .owl-next:hover{
+		opacity:0.6;
+		}
+	.box_text{
+		width:40%;
+		float:left;
+		font-size:16px;
+		font-style:italic;
+		line-height: 24px;
+		    margin-top: 130px;
+		}
+	.img_block2{
+		width:60%;
+		float:left;
+		    box-sizing: border-box;
+		}
+	.block2{
+		padding:60px 0;
+		}
+	.img_block2 img{
+		display:block;
+		margin:0 auto;
+		}
+	.footer{/*Для прижатия footer*/
+		position:absolute;
+		width:100%;
+		left:0;
+		bottom:0;
+		background:#09084D;
+		padding:20px 0;
+		}
+	/*slide*/
+</style>
+<body>
+      <div class="for_page">
+            <div class="page">
+                     <header class="header">
+                     		<div class="container">
+                            			<div class="logo fl">
+                                        		<a href="/">
+                                                <img class="logo-site" src="img/logo.jpg" alt="Логотип | https://site.com.ua" title="Логотип" />
+                                                </a>
+                                        </div>
+                                       <div class="clock_work fl">
+                                         <i class="fas fa-clock"></i><span> 9:00 до18:00</span>
+                                       </div>
+                                       <div class="phone_main fl">
+                                           <i class="fas fa-phone-square-alt"></i>
+                                           <a href="tel:+380987875343">+38 (098) 787 53 43</a>
+                                       </div>
+                                       <div class="adress_main fl">
+                                          <i class="fas fa-map-marked"></i>
+                                          г. Киев ул. Попудренка 23 оф. 34
+                                       </div>
+                                       <div class="clear"></div>
+                            </div>
+                                <nav class="nav-menu">
+                                   <div class="container">
+                                         <ul class="menu-main">
+                                              <li class="item-menu"><a href="item-link active">Главная</a></li>
+                                              <li class="item-menu"><a href="item-link">О Компании</a></li>
+                                              <li class="item-menu"><a href="item-link">Каталог</a>
+                                                  <ul class="child-menu-item">
+                                                            <li class="item-menu"><a href="item-link">Красовки</a></li>
+                                                            <li class="item-menu"><a href="item-link">Сандали</a></li>
+                                                            <li class="item-menu"><a href="item-link">Кеды</a></li>
+                                                            <li class="item-menu"><a href="item-link">Балетки</a></li>
+                                                            <li class="item-menu"><a href="item-link">Ботинки</a></li>
+                                                  </ul>
+                                              </li>
+                                              <li class="item-menu"><a href="item-link">Новости</a></li>
+                                               <li class="item-menu"><a href="item-link">Контакты</a></li>
+                                         </ul>
+                                         <div class="clear"></div>
+                                   </div>
+                                </nav>
+                     </header>
+                     <section class="slider">
+                         <div class="owl-carousel" id="home_slider">
+                                <div class="item slide1">
+                                        <div class="container">
+                                          <h2>По низкой цене</h2>
+                                          <div class="text_slider">Купи сейчас не думай. Это твой последний шанс</div>
+                                        </div>
+                                </div>
+                                <div class="item slide2">
+                                        <div class="container">
+                                           <h2>На все скидка 50%</h2>
+                                           <div class="text_slider">На все товары -50%. Акция до 30 октября!!!!</div>
+                                        </div>
+                                </div>
+                          </div>
+                     </section>
+                     
+                     <section class="block2">
+                        <div class="container">
+                        		<div class="box_text">
+                                    На товары в нашем магазине предоставляется гарантия, подтверждающая обязательства по отсутствию в товаре заводских дефектов. Гарантия предоставляется на срок от 2 недель до 36 месяцев в зависимости от сервисной политики производителя. Срок гарантии указан в описании каждого товара на нашем сайте. Пожалуйста, проверяйте комплектность и отсутствие дефектов в товаре при его получении. Гарантийным обслуживанием занимаются сервисные центры, авторизованные производителями.
+                                </div>
+                                <div class="img_block2">
+                                   <img src="img/img_block2.jpg" alt="" title="" />
+                                </div>
+                               <div class="clear"></div>
+                        </div>
+                     </section>
+            </div>
+            <footer class="footer">
+                copyright 2020
+            </footer>
+        </div>
+ 
+</body>
+</html>

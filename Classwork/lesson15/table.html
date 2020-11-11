@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+</head>
+<style>
+table.table_main,
+th,
+td{
+	border:1px solid #000;
+	}
+table.table_main{
+	border-collapse:collapse;
+	}
+table.table_main tr td{
+	height:50px;
+	vertical-align:bottom;
+	}
+tr:hover{
+	background:#f5f5f5;
+	}
+/*tr:nth-child(even) используются два псевдо елемента либо чётный или не чётные*/ 
+tr:nth-child(odd){
+	background:#69F0DF;
+	}
+</style>
+<body>
+  <table class="table_main">
+  		<thead>
+          Новая Таблица
+        </thead>
+        <tbody>
+                <tr>
+                    <th>Отдых</th>
+                    <th>Покупки</th>
+                    <th>Работа</th>
+                </tr>
+                
+                <tr>
+                    <td>Море</td>
+                    <td>Одежда</td>
+                    <td>Бумаги</td>
+                </tr>
+                
+                <tr>
+                    <td>Кино</td>
+                    <td>Машина</td>
+                    <td>Компьютер</td>
+                </tr>
+                
+                 <tr>
+                    <td>Природа</td>
+                    <td>Квартира</td>
+                    <td>Конфиренция</td>
+                </tr>
+                
+                <tr>
+                </tr>
+        </tbody>
+  </table>
+  
+  
+    <table border="1" align="center" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Отдых</th>
+                    <th>Покупки</th>
+                    <th rowspan="3">Работа</th>
+                </tr>
+                
+                <tr>
+                    <td rowspan="2">Море</td>
+                    <td>Одежда</td>
+                 
+                </tr>
+                
+                <tr>
+                  
+                    <td align="center">Машина</td>
+                </tr>
+                
+                 <tr>
+                    <td colspan="3" align="center">Природа</td>
+                    
+                </tr>
+                
+                <tr>
+                </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Block inline</title>
+</head>
+<style>
+*{
+	padding:0;
+	margin:0;
+	}	
+.block{
+	display:block;
+	}
+.block div{
+	background:#2A27D5;
+	}
+.block div,
+.inline-block div{
+	width:100px;
+	height:100px;
+	margin:5px;
+	}	
+.inline{
+	border:2px dotted #199C49;
+	}
+.inline div{
+	background:#17DBC3;
+	display:inline;
+	border:1px solid #000;
+	font-size:30px;
+	} 
+.inline-block div{
+	display:inline-block;
+	background:#E72DBF;
+	}
+.display_none{
+	display:none;
+	}
+.visibility_hidden{
+	visibility:hidden;
+	}
+</style>
+<body>
+        <div class="parent">
+        		<div class="container">
+                		<h2>Block</h2>
+                         <div class="block">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                         </div>
+                         
+                       <h2>inline</h2>
+                          <div class="inline">
+                              <div>Some Text</div>
+                              <div>Some Text</div>
+                              <div>More Text</div>
+                          </div>
+                           <h2>inline-block</h2>
+                           <div class="inline-block">
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                              <div></div>
+                          </div>
+                         <h2>Visibility</h2>
+                        <div class="block">
+                             <div></div>
+                             <div class="display_none">This element is not displayed att all</div>
+                             <div></div>
+                             <div></div>
+                             <div class="visibility_hidden">This element is not visible, but present in the layout</div>
+                        </div>
+                </div>
+        </div>
+</body>
+</html>
