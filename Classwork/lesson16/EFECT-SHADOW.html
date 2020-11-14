@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EFECT SHADOW</title>
+</head>
+<style>
+h1{
+	text-shadow:2px 2px;
+	}
+h2{
+	text-shadow:2px 2px #E41B1E;
+	}
+h3{
+	text-shadow:2px 2px 5px #E41B1E;/* 1 значение горизонтальная тень, второе значение вертикальная тень, третье значение размфтие цвета, чётвертое значение цвет тени*/
+	}
+.met{
+	text-shadow:0px 0px 3px #E41B1E;
+	}
+.met2{
+	text-shadow:0px 0px 3px #ff0000, 0 0 5px #0000ff;
+	}
+.met3{
+	text-shadow:1px 1px 2px black, 0 0 25px #0000ff, 0 0 5px darkblue;
+	}
+.met4{
+	color:yellow;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+	}
+.box{
+	margin-bottom:30px;
+	width:200px;
+	height:100px;
+	background:#79D520;
+	box-shadow:10px 10px;
+	}
+.box1{
+	margin-bottom:30px;
+	width:200px;
+	height:100px;
+	background:#79D520;
+	box-shadow:10px 10px #ccc;
+	}
+.box2{
+	margin-bottom:30px;
+	width:200px;
+	height:100px;
+	background:#79D520;
+	box-shadow:10px 10px 5px #ccc;
+	}
+.box3{
+	margin-bottom:30px;
+	width:200px;
+	height:100px;
+	background:#79D520;
+	box-shadow: 0 4px 8px 0 rgba(0, 0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+.box4{
+	margin-bottom:30px;
+	width:200px;
+	height:100px;
+	background:#79D520;
+	box-shadow:inset  0 4px 8px 0 rgba(0, 0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+</style>
+<body>
+<h1>Text-Shadow</h1>
+<h2>Text-Shadow</h2>
+<h3>Text-Shadow</h3>
+<h2 class="met">Text-Shadow</h2>
+<h2 class="met2">Text-Shadow</h2>
+<h2 class="met3">Text-Shadow</h2>
+<h2 class="met4">Text-Shadow</h2>
+<h4>Box shadow</h4>
+<div class="box"></div>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+</body>
+</html>
