@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transform 2D</title>
+</head>
+<style>
+.box{
+	width:200px;
+	height:100px;
+	opacity:0.8;
+	transition:0.7s;
+	}
+.box1{
+	background:#C585BA;
+	}
+.box:hover{
+	transform:translateX(20px);
+	}
+.box2{
+	background:#13D5BC;
+	}
+.box2:hover{
+	transform:translateY(30px);
+	}
+.box3{
+	background:#96EA9D;
+	}
+.box3:hover{
+	transform:scale(2,3);
+	}
+.box4{
+	background:#BA82F3;
+	}
+.box4:hover{
+	transform:rotate(20deg);
+	}
+.box5{
+	background:#73E97F;
+	}
+.box5:hover{
+	transform:  skew(20deg, 30deg);
+	}
+</style>
+<body>
+  <div class="container">
+        <div class="box box1">
+             translateX(20px)
+        </div>
+        <div class="box box2">
+             translateY(20px)
+        </div>
+        <div class="box box3">
+             scale
+        </div>
+         <div class="box box4">
+          rotate(20deg)
+        </div>
+        <div class="box box5">
+         skew(20deg, 30deg);
+        </div>
+        <div>matrix(scaleX(),skewY(), skewX(), scaleY(), transleteX(), transleteY(),);</div>
+  </div>
+</body>
+</html>

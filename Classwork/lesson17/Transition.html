@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transition</title>
+</head>
+<style>
+.transition{
+	margin-bottom:40px;
+	width:100px;
+	height:100px;
+	background:#2B40E5;
+	}
+.transition1{
+	transition:width 2s;
+	}
+.transition1:hover{
+	width:300px;
+	}
+.transition2{
+	transition:width 2s, height 4s;
+	}
+.transition2:hover{
+	width:300px;
+	height:300px;
+	}
+.ease{
+	transition-timing-function:linear;
+	}
+.liner{
+	transition-timing-function:linear;
+	}
+.ease-in{
+	transition-timing-function:ease-in;
+	}
+.ease-out{
+	transition-timing-function:ease-out;
+	}
+.ease-in-out{
+	transition-timing-function:ease-in-out;
+	}
+.anim{
+	width:100px;
+	height:100px;
+	background:#D0D947;
+	transition:width 2s;
+	margin-bottom:20px;
+	}
+.anim:hover{
+	width:300px;
+	}
+.delay{
+	width:100px;
+	height:100px;
+	background:#22CD9C;
+	transition:width 3s;
+	transition-delay:1s;
+	}
+.delay:hover{
+	width:300px;
+	}
+.transform_transition{
+	width:100px;
+	height:100px;
+	background:#DA259C;
+	transition:width 2s, height 2s;
+	margin-bottom:30px;
+	}
+.transform_transition:hover{
+	width:300px;
+	height:300px;
+	transform:rotate(180deg);
+	}
+.div{
+	width:100px;
+	height:100px;
+	background:#B6B010;
+	transition-property:width;
+	transition-duration:2s;
+	transition-timing-function:linear;
+	margin-bottom:30px;
+	}
+.div2:hover,
+.div:hover{
+	width:300px;
+	}
+.div2{
+	width:100px;
+	height:100px;
+	background:#B6B010;
+	transition: width 2s linear; /*transition: width 2s linear 1s(задержка);*/
+	}
+</style>
+<body>
+<div class="transition1 transition"></div>
+<div class="transition2 transition"></div>
+<div class="ease anim"></div>
+<div class="liner anim"></div>
+<div class="ease-in anim"></div>
+<div class="ease-out anim"></div>
+<div class="ease-in-out anim"></div>
+
+<div class="delay"></div>
+<div class="transform_transition"></div>
+<div class="div"></div>
+<div class="div2"></div>
+</body>
+</html>

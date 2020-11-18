@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animation_class2</title>
+</head>
+<style>
+.cub{
+	/*animation: around 6s linear 1s infinite;*/
+	animation-name:around; /*имя анимации*/
+	animation-duration:6s;/*Как долго длится анимация*/
+	animation-iteration-count:infinite;/*сколько длится анимация*/
+	/*animation-direction:;должно идти в обратную сторону анимация или нет*/
+	
+	background:#2BBCC2;
+	height:60px;
+	width:60px;
+	line-height:60px;
+	position:absolute;
+	text-align:center;
+	}
+.pantera{
+	    background-image: url(pantera.jpg);
+    background-repeat: no-repeat;
+    width: 296px;
+    height: 178px;
+ /*   animation: run 1s steps(4) infinite;*/
+			}
+	@keyframes run {	
+		0%{
+			background-position:0px  0;
+			}	
+				
+			100% {
+			    background-position: -500px 0;
+			}
+		}
+@keyframes around{
+	from{
+		left:0;
+		top:0;
+		background:#3B8B1E;
+		}
+	25%{
+		left:240px;
+		top:0;
+		opacity:0.3;
+		background:#D2E937;
+		}
+	50%{
+		left:240px;
+		top:140px;
+		opacity:0.5;
+		background:#644DCE;
+		}
+	75%{
+		left:0;
+		top:140px;
+		opacity:1;
+	}
+	to{
+		left:0;
+		top:0;
+		background:#70F0F0;
+		}
+	}	
+
+</style>
+<body>
+	<p class="cub">Cub</p>
+    <div class="pantera"></div>
+</body>
+</html>

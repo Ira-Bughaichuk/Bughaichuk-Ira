@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animation</title>
+</head>
+<style>
+.element{
+	/*animation-name: test-animation;*/
+	/*animation-duration:2s;*/
+	/*animation-delay:5s; перед запуском анимации пройдет 5 секунд*/
+	/*animation-iteration-count:3; анимация воспроизведется 3 раза*/
+	/*animation-direction:normal; анимация воспроизведется в прямом порядке как обычно */
+	/*animation-direction:reverse; анимация воспроизведется в обратном порядке от  to до from */
+	/*animation-direction:alternate; четные повторы анимации воспроизведется в обратном порядке, нечётные */
+	/*animation-direction:alternate-reverse; нечётные повторы анимации воспроизведется в обартном порядке чётные*/
+	/*animation-timing-function:steps(7, end);*/
+	}
+.square{
+	width:50px;
+	height:50px;
+	position:relative;
+	background-color:#2FB1BB;
+	animation: square 5s;
+	animation-iteration-count:6;
+	}
+.boy{
+	background-image:url(img/boy.webp);
+	width:calc(1536px/6);
+	height:256px;
+	animation-name:boy;
+	animation-duration:1s;
+	animation-iteration-count:infinite;
+	animation-timing-function:steps(6);
+	}
+@keyframes boy{
+	from{
+		background-position:0px;
+		}
+		to{
+			background-position: -1536px;
+			}
+	}
+@keyframes square{
+	from{
+		top:0;
+		left:0;
+		}
+		25%{
+			top:0;
+			left:400px;
+			}
+		50%{
+			top:400px;
+			left:400px;
+			background-color:#3334E0;
+			}
+		75%{
+			top:400px;
+			left:0;
+			background-color:#E7D07B;
+			}
+	to{
+		top:0;
+		}
+}
+</style>
+<body>
+<div class="square"></div>
+<div class="boy"></div>
+</body>
+</html>

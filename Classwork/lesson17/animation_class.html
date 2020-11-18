@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animation_class</title>
+</head>
+<style>
+.cub{
+	width:100px;
+	height:100px;
+	background:#2129DC;
+	animation-name:cub;
+	animation-duration:4s;
+	}
+.cub2{
+	width:100px;
+	height:100px;
+	background:#ED45AC;
+	animation-name:cub2;
+	animation-duration:4s;
+	}
+.cub3{
+	width:100px;
+	height:100px;
+	background:#0BE7C6;
+	position:relative;
+	animation:cub3 4s linear infinite;
+	}
+@keyframes cub{
+	from{
+		background:#2129DC;
+		}
+	to{
+		background:#E7F31E;
+		}
+	}
+@keyframes cub2{
+	0%{
+		background:#ED45AC;
+		}
+	25%{
+		background:#F12F52;
+		}
+	50%{
+		background:#23CEDD;
+		}
+	100%{
+		background:#498B31;
+		}
+	}
+	@keyframes cub3{
+		0%{
+			background:#0BE7C6;
+			left:0;
+			top:0;
+			}
+		25%{
+			background:#C4AA2B;
+			top:200px;
+			left:0;
+			}
+		50%{
+			background:#7B2CAE;
+			left:200px;
+			top:200px;
+			}
+		75%{
+			background-color:#6B3417;
+			left:0;
+			top:200px;
+			}
+		100%{
+			background:#0C0DD6;
+			left:0;
+			top:0;
+			}
+		}
+</style>
+<body>
+<div class="cub"></div>
+<div class="cub2"></div>
+<div class="cub3"></div>
+</body>
+</html>

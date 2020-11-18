@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW-17/4animation-cub</title>
+</head>
+<style>
+    .cub{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: cubick;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes cubick{
+        0%{
+            background-color: red;
+            top:0;
+            left:0;
+        }
+        25%{
+            background-color:palevioletred;
+            top:100px;
+            left:0;
+        }
+        50%{
+            background-color:powderblue;
+            top:100px;
+            left:100px;
+        }
+        75%{
+            background-color:purple;
+            top:0;
+            left:100px;
+        }
+        100%{
+            background-color: rgb(91, 67, 202);
+            top:0;
+            left:0;
+        }
+    }
+</style>
+<body>
+<div class="cub"></div>
+</body>
+</html>
