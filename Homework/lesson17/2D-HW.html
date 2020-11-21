@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2D</title>
+</head>
+<style>
+ 
+    .header{
+        height: 25px;
+        background-color: cornflowerblue;
+    }
+    .meny-mane{
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background-color: rgb(14, 84, 214); 
+    }
+    ul.meny li.LINK{
+        width: 200px;
+        height: 50px;
+        list-style:none;
+        float: left;
+        border: saddlebrown 2px solid;
+        margin: 30px 50px;
+        padding-top: 25px;
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+        display: inline-block;
+    }
+    ul.meny li.LINK:hover{
+        color: red;   
+    }
+    ul.meny li.LINK:nth-child(1){
+        position: relative;   
+    }
+    ul.meny li.LINK:nth-child(1) ul.child-meny{
+        display: none;
+        position: absolute;
+        width: 170px;
+        background: center;
+       
+    }
+    ul.meny li.LINK:nth-child(1):hover ul.child-meny{
+        display: block;
+        text-decoration: none;
+        list-style: none;
+        border: rgb(185, 128, 21) 2px solid;
+        margin-top: 25px;
+        background:  rgb(14, 84, 214);
+    }
+    ul.meny li.LINK ul.child-meny{
+        float: inherit;
+        padding: 9px 15px;
+    }
+    .Clear{
+        clear: both;
+    }
+    .transition{
+            
+			height: 73px;
+			width: 100%;
+            padding-top: 120px;    
+            }     
+            li.LINK:nth-child(2){
+                position:relative;
+            }
+            li.LINK:nth-child(2) div.transition{
+                position: absolute;
+                width:100%;
+			    background:rgb(141, 12, 77);
+            }
+    li.LINK:nth-child(2):hover .transition{
+			transition: width 5s;
+            }
+
+    
+</style>
+<body>
+    <div class="header">
+    <div class="meny-mane">
+        <ul class="meny">
+      <li class="LINK">
+          LINK1
+         <ul class="child-meny">
+            <li class="Link-child">link</li>
+            <li class="Link-child">link  
+            </li>
+            <li class="Link-child">link</li>
+         </ul>
+    </li>
+      <li class="LINK">LINK2 </li>
+      <li class="LINK">LINK3</li>
+      <li class="LINK">LINK4</li>
+       
+        <div class="transition"></div>
+        <div class="Clear"></div>
+    </div>
+   
+ </div>
+    
+</body>
+</html>
