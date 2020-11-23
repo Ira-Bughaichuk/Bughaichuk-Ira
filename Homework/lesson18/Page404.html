@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page404</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container1{
+        width: 1250px;
+        margin: 0 auto;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    html,
+    body{
+        height: 100%;
+    }
+    .mane-page{
+        position: relative;
+        min-height: 100%;
+
+    }
+    .page{
+        padding-bottom: 60px;
+    }
+    
+    .footer a{
+        font-size: 20px;
+        text-decoration: none;
+        color:black;
+        padding-left: 550px;
+    }
+    .footer{
+		position:absolute;
+		width:100%;
+		left:0;
+		bottom:0;
+		background-color: cadetblue;
+		padding:20px 0;
+        
+        
+	}
+    .logo{
+        width: 15%;  
+    }
+    img{
+        max-width:100%;
+        width: auto;
+        height: auto;
+    }
+    .f1 i{
+        font-size: 20px;
+    }
+    .f1:hover{
+        color: red;
+    }
+    .phone{
+        display: flex;
+        flex-direction: column;
+    }
+    .phone a{
+        font-size: 20px;
+        text-decoration: none;
+        padding-top: 5px;
+        color: black;
+    }
+    .phone a:hover{
+        color: red;
+    }
+    .clear{
+        clear:both;
+    }
+    .container{
+        margin-top: 15px;
+        width: 100%;
+        height: 50px;
+        background-color: blue;
+        
+    }
+    .mane-meny{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style:none;     
+    }
+    
+    li.meny{
+        font-size: 18px;
+        font-weight: 800;
+        color: white;
+    }
+    li.meny:hover{
+        color: red;
+    }
+    .error{
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+        order:2;
+    }
+    .textt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text1{
+        font-size:100px;
+        color:blueviolet;
+        margin-top: 20px;    
+    }
+    .text3{
+        margin-top: 20px;
+        font-size:40px;
+        color:black;
+        font-weight:800; 
+    }
+    .text{
+        margin-top: 20px;
+        font-size:20px;
+        color:black;    
+    }
+    .gif{
+        width: 50%;
+        order:1
+    }
+    .button {
+        width: 300px;
+        height: 50px;
+        margin-top: 30px;
+        padding-top: 25px;
+        background-color: rgb(52, 21, 226);
+        border:  rgb(3, 9, 66) 3px solid;
+        font-size:20px;
+        color:white;
+        text-align: center;
+        text-decoration: none;
+        order: 5;    
+    }
+    .button:hover{
+        border-radius: 10px;
+        background-color: crimson;
+    }
+
+
+        
+    
+    
+
+</style>
+<body>
+   
+    <div class="mane-page">
+       <div class="page">
+        <heder class="header">
+            <div class="container1">
+
+            <div class="logo">
+                <a href="/">
+                    <img class="logo-site" src="img/adidas.png" alt="Логотип | https://site.com.ua" title="Логотип"/>
+                </a>
+            </div>
+            <div class="street f1">
+                <i> city Kyiv, office-33/18</i>
+            </div>
+            <div class="time f1">
+                <i> З 9:00 до 18:00</i>
+            </div>
+            <div class="phone f1">
+                <a href="tel:+80987153207">0987153207</a>
+                <a href="tel:+80987153206">0987153206</a>
+                <a href="tel:+80987153205">0987153205</a>
+            </div>
+            <div class="clear"></div>
+
+            </div>
+        </heder>
+            
+         <div class="block2">
+            <div class="container">
+                <ul class="mane-meny">
+                    <li class="meny">Категорії</li>
+                    <li class="meny">Акції</li>
+                    <li class="meny">Магазини</li>
+                    <li class="meny">Контактні дані</li>
+                    <li class="meny">Відгуки</li>
+                    <li class="meny">Про бренд</li>  
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="error">
+                <div class="textt">
+
+                <h1 class="text1" >404 </h1>
+                <h3 class="text3">Сторінка не знайдена</h3>
+                <p class="text">Даної сторінка не існує ви помилились</p>
+                <a class="button" href="#"> На головну</a>
+                </div>
+                <img class="gif" src="img/adGif.gif" alt="GIF1 | https://site2.com.ua" title="Mistake-404"/>
+            </div>  
+            
+         </div>
+
+           
+      </div>
+        <footer class="footer">
+            <a href="mailto:IraBughaichuk@ukr.net">IraBughaichuk@ukr.net</a>
+        </footer>
+    </div>
+</body>
+</html>
