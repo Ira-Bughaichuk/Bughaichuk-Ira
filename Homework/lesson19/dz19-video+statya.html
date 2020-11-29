@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DZ19-video+statya</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    html,
+    body{
+        height: 100%;
+        position: relative;
+    }
+    .footer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 50px 0;
+        background-color: rgb(49, 38, 38);
+        margin-top: 40px;
+        
+    }
+    
+    .for-page{
+        position: relative;
+        min-height: 100%;
+    }
+    .page{
+        padding-bottom: 60px;
+    }
+    .header{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+    }
+    .meny{
+        background-color: rgb(78, 77, 75);
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sidebar{
+		background: #778181;
+		height:auto;
+	    width: 100px;
+    }
+    .wrapper-header{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .wrapper-header p{
+        font-size: 20px;
+        color: white;
+        margin-left: 20px;
+    }
+    .meny ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .meny ul li{
+        list-style: none;
+    }
+    .meny ul li a{
+        padding: 15px 10px;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+        color:white;
+    }
+    .meny ul li a:hover{
+        color:black;
+       
+    }
+   
+    .content{
+        width:100%;
+        background-color: rgb(192, 181, 181);
+    }
+    .wrapper-content{
+        display:flex;
+        justify-content: space-around;
+    }
+    .logo img{
+        max-width: 100%;
+        width: 175px;
+        height: 90px;
+        margin-top: 5px;
+    }
+    .wrapper-content h1{
+        font-size: 40px;
+        color: black;
+        text-align: center;
+    }
+    .wrapper-content h1:hover{
+        text-shadow: 8px 8px 5px cornsilk;
+        transform: scale(2,3);
+        }
+    .wrapper-content p,a{
+        color: white;
+        font-size: 20px;
+        text-decoration:none;    
+    }
+    .wrapper-content a:hover{
+        color:black;
+    }
+   
+    .wrapper-content h2{
+        text-align:center;
+        text-transform:uppercase;
+        color: rgb(0, 0, 0);
+        font-size: 35px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-shadow: 8px 8px 5px rgb(78, 77, 75);
+    }
+    .wrapper-content h2:hover{
+        color: white;
+        transition: 3s;
+        
+    }
+    .flex{
+        display: flex;
+       
+    }
+    .flex1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    } 
+    .images-right{
+        max-width: 100%;
+        width: 50%;
+        height: 50%;
+        margin-right: 45px;
+        margin-left:45px;
+        order:1;
+        margin-bottom: 70px;
+        
+    }
+    .images-left{
+        max-width: 100%;
+        width: 50%;
+        height: 50%;
+        margin-left: 45px;
+        margin-right:45px;
+        margin-bottom: 70px;
+        order:4;
+         
+    }
+    
+    .images-right:hover{
+        transform: scale(1,1); 
+        transition: 3s;  
+    }
+    .images-left:hover{
+        transform: scale(1,1); 
+        transition: 3s; 
+        
+    }
+
+  
+    .text-right{
+        order:2;
+        margin-left: 45px; 
+        margin-bottom: 70px;
+    }
+    .text-left{
+        order:3;
+        margin-right: 45px;     
+        margin-bottom: 70px;    
+    }
+    
+   
+    
+       
+    
+
+</style>
+<body>
+    <main class="for-page">
+        <div class="page">
+            <header class="header">
+                <div class="container">
+                    <div class="wrapper-header">
+                        <div class="logo">
+                        <a href="/">
+                            <img src="img/logo2.jpg" alt="Логотип | https://site.com.ua" title="Mercedes-Benz">
+                        </a>
+                        </div>
+                        <p>Mercedes-Benz</p>
+                    </div>
+                </div>
+                <nav class="meny">
+                    <div class="container">
+                        <ul class="nav-meny">
+                            <li><a href="#">Категорії </a></li>
+                            <li><a href="#">Новини </a></li>
+                            <li><a href="#">Відео </a></li>
+                            <li><a href="#">Контакти </a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>  
+            <section class="main-page">
+                <div class="container">
+                    
+                    <div class="wrapper-content">
+                        <aside class="sidebar">
+                        </aside>
+                        <div class="content">
+                            <h1> Прогрес Mercedes-Benz</h1>
+                          
+
+                            <article>
+                                <video class="video" preload="auto" autoplay  width="100%" height="800"  controls>
+                                    <source src="video/VISION-AVTR.mp4" type="video/mp4">
+                                    <source src="video/VISION-AVTR.ogg" type="video/ogg">
+                                        
+                                </video>
+                                <h2>VISION  AVTR - втілення екологічності</h2>
+                                <div class="flex">
+                                    <img class="images-left " src="img/mers2.jpg" alt="Mercedes 1954 year |  https://site.com.ua"/> 
+                                    <div class="text-right">
+                                        
+                                   <p>Неповторна архітектура дизайну<a href="/">VISION AVTR</a>  поєднує в собі інтер'єр і екстер'єр, створюючи цілісний світ на візуальному і емоційному рівні.</p>
+                                   <p> Завдяки інтелектуальному і повністю адаптивному розподілу крутного моменту, потужність чотирьох повністю індивідуально керованих двигунів керується не тільки найкращим чином з точки зору динаміки руху, але, перш за все, високоефективно. Інноваційний повний привід забезпечує абсолютно нову свободу і динаміку руху, в той же час гарантуючи максимально можливу безпеку.</p>
+                                   <p>Акумулятор повністю заряджається менше ніж за 15 хвилин. В результаті, маючи потужність близько 110 кВтг, VISION AVTR забезпечує електричну дистанцію понад 700 кілометрів.</p>
+                                  </div>
+                                   </div>
+                              </article>
+
+                            <article>
+                                
+                                <h2>Mercedes-Benz 300SL 1954</h2>
+                                <div class="flex">
+                                 <img class="images-right" src="img/mers1.jpg" alt="Mercedes 1954 year |  https://site.com.ua"/>
+                                  <div class="text-left">
+                                   <p>У 1953-му році бізнесмен Макс Гоффман, запропонував <a href="/">Mercedes-Benz'у</a> створити дорожню версію «300SL» для розвитку американського ринку. Результатом став W198 «300SL». З моменту його прем'єри у 1954-му році, його футуристичні риси і, звичайно, незвичайні двері гарантували повний успіх. Еліта США, куди поставлялося більше 80% всіх автомобілів, розкуповують їх на аукціонах. Спочатку на автомобілях стояла система трьох карбюраторів типу Weber , давала потужність 115 к.с. Проте незабаром, на ній була поставлена ​​система впорскування палива фірми Bosch, що підвищило потужність до 215 к.с. (158 кВт) при 5800 об/хв. Це дозволило розігнати легкий автомобіль до 250 км/год.</p>
+                                   <p>У 1957-му році «300SL» піддався великій модернізації, в ході якої він позбувся своєї унікальної конструкції дверей-даху, на користь класичної схеми родстера. Причин цьому було декілька, по-перше автомобіль був створений як гончий, а не як класу Гран-Туризмо в який він несподівано перетворився.</p>
+                                 </div>
+                                 </div>
+                                 <div class="flex1">
+                                 
+                                 <video preload="auto" autoplay width="600" height="auto" controls poster="img/mers5.jpg">
+                                    <source src="video/mers3.mp4" type="video/mp4">
+                                    <source src="video/mers3.ogg" type="video/ogg">       
+                                </video>
+                                 </div>
+                            </article>
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="container"> </div>
+        </footer>
+    </main>
+
+</body>
+</html>

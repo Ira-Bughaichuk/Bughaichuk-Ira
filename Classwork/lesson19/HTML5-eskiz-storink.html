@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5</title>
+</head>
+<style>
+ *{
+	 padding:0;
+	 margin:0;
+	 }
+	body,
+	html{
+		height:100%;
+		position:relative;
+		}
+	.for_page{
+		position:relative;
+		min-height:100%;
+		}
+	.page{
+		padding-bottom:60px;
+		}
+	.footer{
+		position:absolute;
+		left:0;
+		bottom:0;
+		width:100%;
+		background:#221AE9;
+		padding:50px 0;
+		}
+.header{
+	background:#f1f1f1;
+	}
+	.wrapper_header{
+		
+		height:100px;
+		}
+	.menu{
+		background:#070B59;
+		}
+		.menu ul{
+			display:flex;
+			}
+		.menu ul li{
+			list-style:none;
+			}
+		.menu ul li a{
+			padding:15px 10px;
+			color:#ffff;
+			font-size:15px;
+			text-decoration:none;
+			display:block;
+			}
+	.container{
+		width:1170px;
+		margin:0 auto;
+		}
+	.sidebar{
+		background: #99DFD9;
+		height:700px;
+		    width: 300px;
+		}
+	.content{
+		width:870px;
+		background:#07BC87;
+		}
+	.wrapper_content{
+		    display: flex;
+		}
+</style>
+<body>
+     <main class="for_page">
+         <div class="page">
+              <header class="header">
+                 <div class="container">
+                		<div class="wrapper_header">Header</div>
+                  </div>
+               <nav class="menu">
+                 <div class="container">
+                     <ul class="nav-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Catalog</a></li>
+                        <li><a href="#">Contact</a></li>
+                     </ul>
+                  </div>
+               </nav>
+              </header>
+         		<section class="main_page">
+                    <div class="container">
+                        <div class="wrapper_content">
+                             <aside class="sidebar">
+                             </aside>
+                             <div class="content">
+                              <article>Новость один</article>
+                              <article>Новость два</article>
+                             </div>
+                        </div>
+                    </div>
+                </section>	
+         </div>
+         <footer class="footer">
+             <div class="container">
+           			 Footer
+              </div>
+         </footer>
+     </main>
+</body>
+</html>

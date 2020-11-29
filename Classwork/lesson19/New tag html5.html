@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New tag html5</title>
+</head>
+<style>
+.container{
+	width:1170px;
+	}
+.figure{
+	width:300px;
+	}
+img{
+	width:auto;
+	height:auto;
+	max-width:100%;
+	}
+</style>
+<body>
+   <div class="container">
+      <input list="box">
+      <datalist id="box">
+          <option value="Первый">Первый</option>
+          <option value="Второй">Второй</option>
+         </datalist>
+        <article>
+             <figure class="figure">
+                <img src="https://millionstatusov.ru/pic/statpic/all8/5e04c21a52a39.jpg"  alt="img" />
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Frozetka.com.ua%2Fninebot_26_01_0000_40%2Fp80565117%2F&psig=AOvVaw2X2R9rjeWYDPmm-mp96NK3&ust=1606320211239000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjqv6DHm-0CFQAAAAAdAAAAABAD"  alt="img" />
+                <figcaption>Луна</figcaption>
+             </figure> 
+        </article>
+        <h2>Audio</h2>
+        
+        <div>
+          <audio autoplay controls loop muted>
+             <source src="video/song.ogg" type="audio/ogg" />
+             <source src="video/song.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <div>
+           <video  preload="auto" autoplay loop muted controls>
+             <source src="video/song.ogg" type="audio/ogg" />
+             <source src="video/song.mp3" type="audio/mp3" />
+          </video>
+       </div>
+       <h2>Video</h2>
+        <div>
+          <video  preload="auto" muted width="500" height="auto" controls poster="video/hors.jpg">
+            <source src="video/intro-video-lg.mp4" type="video/mp4"> 
+            <source src="video/intro-video-lg.webm" type="video/webm">
+            <source src="video/intro-video-lg.ogv" type="video/ogv">
+            </video>
+        </div>
+        <div>
+            <video  preload="auto" autoplay loop muted width="500" height="auto" >
+            <source src="video/intro-video-lg.mp4" type="video/mp4"> 
+            <source src="video/intro-video-lg.webm" type="video/webm">
+            <source src="video/intro-video-lg.ogv" type="video/ogv">
+            </video>
+        </div>
+   </div>
+</body>
+</html>
