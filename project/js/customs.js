@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
 
     'use strict';
 
-	var slid = jQuery('#home_slider');
+	var slid = jQuery('#slider-baner');
 		
 	slid.owlCarousel({
 		items: 1,

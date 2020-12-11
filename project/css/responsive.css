@@ -1,2 +1,125 @@
 @charset "UTF-8";
 /* CSS Document */
+/*Викор для медіа-запроса всередині записуємо, те що я хочу змінити для певного розширенія*/
+/*block1*/
+@media(max-width:1199px){/*col-xl*/ 
+    /*block1*/
+    .nav-menu ul li{
+        margin-right: 12px;
+    }
+    /*block1*/
+    /*block2*/
+    /*block2*/
+    
+}
+@media(max-width:991px){/*col-lg*/
+    .banner-home {
+        top: -247px;}
+    .nav-menu {
+        margin: 15px 0;
+        border-bottom: solid 1px #a29a98; } 
+    
+    .border-header {
+        border-bottom: inherit;
+    }
+    #slider-baner {
+        padding-top: 254px;}
+    .banner-home .owl-carousel .owl-item .item h2 {
+        font-size: 80px;}
+    .banner-home .owl-carousel .owl-item .item .text-slider {
+        font-size: 142px;
+        margin-top: -20px;
+    }
+    /*block1*/
+    /*block2*/
+    .block2 h1{
+        font-size: 25px;
+        line-height: 31px;
+        margin-bottom: 40px;
+    }
+    .box2_block{
+        margin-bottom: 40px;
+    }
+    /*block2*/
+}
+
+@media(max-width:776px){/*col-md*/
+    /*block1*/
+    .logo{margin-bottom: 20px;
+    display: block;}
+    .logo img{/*логотип був по центру*/
+        display: block;
+        margin: 0 auto;
+    }
+    .nav-menu .navbar-toggler, .nav-menu .navbar-brand {
+        display: block;
+    }
+    .nav-menu{
+        margin: 15px 0px;
+        border-bottom: inherit;
+        background: #fff;
+        padding: 8px;
+    }
+    .nav-menu .responsive_menu{
+      display: flex;
+      justify-content: space-between;}
+    .nav-menu .navbar-expand-md .navbar-brand{
+        color:#333;
+    }
+    .nav-menu .navbar-expand-md .navbar-toggler{
+        color:#333;
+    }
+    .nav-menu .navbar-expand-md .navbar-toggler i{
+       transition: 0.3s;
+    }
+    .nav-menu .navbar-expand-md .navbar-toggler i:hover{
+        color:rgb(148, 146, 146);
+    }
+    .nav-menu ul li a{
+        color: #333;
+        font-weight: 700;
+        border-bottom: inherit;/*щоб не було знизу лінії */
+        padding: 10px;/*щоб не  пригала строкавгору і вниз підчас її наведенні */
+    }
+    .nav-menu ul li.active a, .nav-menu ul li a:hover{
+        text-decoration:none;
+        padding-bottom:0;
+        border-bottom: inherit;/*щоб не було знизу лінії */
+    }
+    .nav-menu ul li{
+        margin-right: 12px;
+        border-bottom: solid 0.5px #ccc;
+
+    }
+    /*block1*/
+    /*block2*/
+
+    /*block2*/
+
+    
+}
+@media(max-width:500px){/*col-sm*/
+    /*block1*/
+    .banner-home .owl-carousel .owl-item .item h2{
+        font-size: 40px;
+    }
+    .banner-home .owl-carousel .owl-item .item .text-slider{
+        font-size: 78px;
+        margin-top: -21px;
+    }
+    /*block1*/
+    /*block2*/
+    .block2{
+        padding-top: 230px;
+        padding-bottom: 40px;
+    }
+    .block2 h1{
+        font-size: 18px;
+        line-height: 26px; 
+    }
+    /*block2*/
+    
+}
+@media(max-width:480px){/*навсякий випадок, якщо буде екран щн менше*/
+    
+}

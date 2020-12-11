@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta charest="UTF-8">
+        <title>table</title>
+        </head>
+        <style>
+            /* even-парні, odd-не парні, щоб через строку виділялося іншим коліром*/
+            .table tr:nth-child(odd){
+               background: #gray;
+               padding-left:0; 
+               max-width:300px;
+            }
+            /*before/after-можемо задавати якійсь значення, іконки. Але задавати значення тому елементу у якого є max-width */
+            .psevdo:before{
+                content:'before';
+                position: relative; 
+                color: #12EBDE;
+            }
+            .psevdo:after{
+                content:'after';
+                position: relative;
+                color: #12EBDE;
+                right:0;
+
+
+            }
+
+
+        </style>
+        <body>
+           <table border="1" class="table">
+               Нова таблиця
+               <thead>
+                   <tbody>
+                   <tr>
+                       <th> одих </th>
+                       <th> покупки </th>
+                       <th> робота </th>
+                   </tr>
+
+                   <tr>
+                       <td> Кіно </td>
+                       <td> машина</td>
+                       <td> бумаги</td>
+                   </tr>
+
+                   <tr>
+                       <td>прогулка</td>
+                       <td>продукти</td>
+                       <td>справи</td>
+                   </tr>
+
+                   <tr>
+                       <td>здоровя</td>
+                       <td>ліки</td>
+                       <td>гроші</td>
+                   </tr>
+                </tbody>
+               </thead>
+            </table> 
+
+
+            <table border="1"align="center" cellpadding="5" cellpacing="0" >
+                    <tr>
+                        <th> одих </th>
+                        <th> покупки </th>
+                        <th rowspan="3"> робота </th>
+                    </tr>
+ 
+                    <tr>
+                        <td> Кіно </td>
+                        <td rowspan="2"> машина</td>
+                        
+                    </tr>
+ 
+                    <tr>
+                        <td>прогулка</td>
+                        
+                    </tr>
+ 
+                    <tr>
+                        <td colspan="3" align="center" >здоровя</td>  
+                    </tr>
+ 
+                
+             </table>
+              <div class="psevdo">Привіт використовую псевдо елемен</div>
+        </body>
+        </html>

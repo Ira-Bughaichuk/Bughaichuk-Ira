@@ -1,2 +1,335 @@
 @charset "UTF-8";
 /* CSS Document */
+*{
+    padding: 0;
+    margin:0;
+}
+html,
+body{
+    height: 100%;
+}
+.body{
+    color: #000;
+    font-size: 14px;
+}
+/*.h1, .h2, .h3, .h4 ,.h5,.h6, h1, h2, h3, h4, h5, h6{
+    line-height: normal !important;
+}* удаляэмо тому що не можна було б ставити выдступи мыж рядками /
+img{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+}
+/*header*/
+.header{
+    z-index: 2;
+    position: relative;
+    padding-top: 60px;
+}
+.nav-menu ul li{
+    margin-right: 44px;
+}
+.nav-menu ul li:last-of-type{
+    margin-right: 0;
+}
+.nav-menu ul li a{
+    transition: 0.3s;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.nav-menu ul li.active a,
+.nav-menu ul li a:hover{
+    text-decoration: none;
+    padding-bottom: 35px;
+    color: #ffeb3b;
+    border-bottom: solid 2px #ffeb3b;
+}
+.border-header{
+    border-bottom: solid 1px #a29a98;
+    
+}
+.btn-search{
+    font-size: 0;
+    background: url(../img/search.png) no-repeat;
+    width: 43px;
+    height: 37px;
+    border: inherit;
+   
+    outline: none;
+}
+.pole-search{
+    display: none;
+    outline: none;
+}
+.form-search{
+    position: relative;/*Обовязково задається коли викор. before*/
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.form-search:before{
+    content:'' ;/*Обовязково задається першим*/
+    position: absolute;/*Обовязково задається і другим*/
+    /*height: 37px; вертикальна лінія біля пошуку*/
+    background-color: #a29a98;
+    width: 1px;
+    left: 0;
+    top: 0;
+}
+
+
+/*header*/
+.nav-menu .navbar-toggler,
+.nav-menu .navbar-brand{
+    display: none;
+
+}
+
+
+/*  font-family: 'back_to_black_demoregular';
+font-family: 'vidaloka_regular'; */
+
+/*banner-home*/
+.banner-home{
+    position:absolute;
+    left: 0;
+    z-index: 1;
+    top: 0;
+    background: url(../img/baner_home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+#slider-baner{
+    padding-top: 300px;
+}
+.banner-home .owl-carousel .owl-item .item h2{
+    text-align: center;
+    color: #fff;
+    font-size: 110px;
+    font-family: 'back_to_black_demoregular';
+   line-height: normal;/*можна було б ставити выдступи між рядками, замість  line-height: normal !important;*/
+}
+.banner-home .owl-carousel .owl-item .item .text-slider{
+    font-size: 280px;
+    font-family: 'back_to_black_demoregular'; 
+    text-align: center;
+    color: #fff;
+    margin-top: -35px;
+}
+#slider-baner .owl-carousel .owl-theme .item{
+    background: url(img/arrow-right.png) no-repeat;
+    width:8px;
+	height:13px;
+	outline:none;
+	position:absolute;
+	bottom: 300px;
+    right: 16px;
+}
+#slider-baner .owl-carousel .owl-theme{
+    background: url(img/arrow-left.png) no-repeat;
+    width:8px;
+	height:13px;
+	outline:none;
+	position:absolute;
+	bottom: 300px;
+    left: 16px;
+}
+#slider-baner .owl-carousel .owl-theme:hover,
+#slider-baner .owl-carousel .owl-theme:hover{
+    opacity:0.6;
+}
+
+
+
+/*banner-home*/
+
+/*block2*/
+.block2{
+padding-top: 900px;/*через це що задавали для блоку зверху абсолют тому щоб не підскакував блок до верху пишемо ці дві строки*/
+padding-bottom: 100px;
+
+}
+.block2 h1{
+font-size: 36px;
+color: black;
+line-height: 49px;/*відстань між рядками*/
+font-family: 'vidaloka_regular';
+text-align: center;
+margin-bottom: 100px;/*відстань між заголовком і рядком блоків*/
+}
+.block2 h1 a{
+color: #ffeb3b;
+transition: 0.3s;
+text-decoration: underline;
+}
+.block2 h1 a:hover {
+    text-decoration:none
+}
+.box2_block{
+display: flex;
+margin-bottom: 100px;
+}
+.icon_box2{
+margin-right: 32px;
+}
+.icon_box2 i{
+font-size: 26px;
+color: #dad9d9;
+transition: 0.3s;/*для наведення*/
+}
+.content_box2{
+    border-left: solid 1px #dad9d9;/*створення вертикальної лінії між логотипом і текстм в блоці*/
+    padding-left: 30px;
+}
+.content_box2 .title_box2{
+font-size: 15px;
+color: #313113;
+font-weight: 600px;
+margin-bottom: 30px;
+}
+.content_box2 .text_box2{
+font-size: 13px;
+color: #969595;
+line-height: 25px;
+}
+
+.box2_block:hover .icon_box2{
+color: #ffeb3b;/*наведення на будь-яке місце на блоці і буде загорятися колір*/
+}
+/*block2*/
+/*block4*/
+.block4{
+padding: 100px 0px;
+}
+.block4 h2{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: 'vidaloka_regular';
+}
+.block4 .text-block2{
+    font-size: 16px;
+    text-align: center;
+    color: #969595; 
+    max-width: 750px;
+    width: 100%;
+
+}
+.block4 .nav-tabs{
+    border-bottom: inherit;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+/*потрібно задати border актів щоб таб не скакав його зробимо полупрозрачним */
+.block4 .nav-tabs li a:hover,
+.block4 .nav-tabs li a .active{ 
+color: #181a1f;
+font-size:14px;
+border-color:inherit;
+background-color: #fff;
+border: solid 2px transparent;
+
+}
+.block4 .nav-tabs li{
+margin-right: 10px;
+}
+
+.block4 .nav-tabs li a{
+    color: #181a1f;
+    font-size:14px;
+    border-color:inherit;
+    background-color: #fff;
+    border: solid 2px t#ffda00;
+    padding: 20px 35px;
+}
+.block4 .nav-tabs .nav-link{
+    
+    border-top-left-radius: inherit; 
+    border-top-right-radius: inherit; 
+}
+.img_galery1{
+    max-width: 500px;
+    width: 100%;
+}
+/*задаємо position: relative; тому що для дочірного елемента */
+.img_galery{
+    position: relative;
+    transition: 0.3s;
+}
+.img_galery .hover_galery{
+    display: none;
+    transition: 0.3s;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background: rgb(251, 221, 47, 0.8);
+    padding: 80px 30px 80px 30px;
+}
+.galery_home{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+/*Щоб сама довга картинка підходила по розмірам іншим */
+.img_galery1{
+    width: 24.7%;
+}
+.img_galery2{
+    
+    display: flex;
+}
+.img_galery img{
+    width: 100%;
+}
+.img_galery3{
+    
+    display: flex;
+}
+.galery_wrapper{
+    width: 70%;
+}
+.img_galery_box1{
+height: 608px;
+}
+.img_galery_box1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.title_galery{
+color: #000;
+font-size: 30px;
+padding-bottom: 20px;
+font-family: 'vidolaka_regular';
+}
+.text_galery{
+color: #434342;
+font-size: 15px;
+line-height: 19px;
+}
+.btn_galery{
+display: block;
+font-size: 16px;
+color: #181a1f;
+text-decoration: none;
+transition: 0.3s;
+border: 2px solid #000;
+padding: 6px 15px;
+width: 156px;
+text-align: center;
+margin-top: 28px;
+}
+.btn_galery{
+    text-decoration: none;
+    color: #181a1f;
+    opacity: 0.7;
+}
+.img_galery:hover .hover_galery{
+    display: block;
+
+}
+/*block4*/

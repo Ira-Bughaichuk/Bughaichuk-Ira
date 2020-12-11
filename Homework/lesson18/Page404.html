@@ -87,7 +87,8 @@
     .mane-meny{
         display: flex;
         justify-content: space-around;
-        align-items: center;
+       
+        
         list-style:none;     
     }
     
@@ -95,6 +96,7 @@
         font-size: 18px;
         font-weight: 800;
         color: white;
+        margin-top: 13px;
     }
     li.meny:hover{
         color: red;
@@ -103,17 +105,21 @@
         margin-top: 15px;
         display: flex;
         justify-content: space-around;
-        order:2;
+        
     }
     .textt{
         display: flex;
         flex-direction: column;
         justify-content: center;
+         align-items: center;
+        order: 2;
+        margin: auto;
     }
     .text1{
         font-size:100px;
         color:blueviolet;
-        margin-top: 20px;    
+        margin-top: 20px; 
+     
     }
     .text3{
         margin-top: 20px;
@@ -127,12 +133,15 @@
         color:black;    
     }
     .gif{
+        max-width: 352px;
         width: 50%;
-        order:1
+     margin: auto;
+       order: 1;
     }
+   
     .button {
-        width: 300px;
-        height: 50px;
+        width: 200px;
+        height: 40px;
         margin-top: 30px;
         padding-top: 25px;
         background-color: rgb(52, 21, 226);
@@ -141,11 +150,14 @@
         color:white;
         text-align: center;
         text-decoration: none;
-        order: 5;    
+        margin-left: 46px;
+        transition: all 3s ease-out;
+            
     }
     .button:hover{
-        border-radius: 10px;
+        border-radius: 15px;
         background-color: crimson;
+        
     }
 
 
