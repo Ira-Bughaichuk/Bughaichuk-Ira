@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Switch</title>
+</head>
+<script>
+    /*конструкція яка має кілька if. Представляє собою вибір кількох варіантів.*/ 
+    /*синтаксис представляє собою конструкцію блоків- keys і не обовязковий -defoult */
+    /*[break]-відразу після того як значення підходить*/
+    /*default : - якщо ні одне значення не підходить*/
+/*switch(x){
+	case 'value1':// (if x === 'value1')
+	..
+	[break]
+	case 'value2':// (if x === 'value2')
+	... [break]
+	
+	default :
+	...
+	[break]
+	}*/
+
+
+	/*
+	let a = 2+2;
+	
+	switch(a){
+		case 3:
+		alert('Маловато');
+		break;
+		case 4:
+		alert('В точку');
+		break;
+		case 5:
+		alert('Перебор');
+		break;
+		default:
+		alert('Нет таких значений');
+		}
+    */
+
+    /*+a-перетворює строку в число */	
+	/*
+    let a = "1";
+	let b = 0;
+	
+	switch (+a){
+		 case b+1:
+		  alert ("Выполнится значение a+ будет 1 что равно b+1");
+		  break;
+		  
+		  default:
+		  alert("Это не выполнится");
+		}
+    */
+/* Обєднати два кейса(case 3:,case 5:) і тоді буде виводитися:'Плохо с математикой','Не Правильно'
+    let a = 5;
+	
+	switch(a){
+		case 4:
+		alert('Правильно');
+		break;
+		
+		case 3:
+		case 5:
+		alert('Не Правильно');
+		alert('Плохо с математикой');
+		break;
+		default:
+		alert('Нет таких значений');
+		}		*/
+	
+	
+	let arg = prompt ("Введите число",' ');
+	switch(arg){
+		case '0':
+		case '1':
+		  alert('Один или ноль');
+		  break;
+		case '2':
+		   alert('Два');
+		   break;
+		   
+		case 3:
+		  alert('Никогда не выполнится');
+		  break;
+		  
+		 default:
+		   alert("Нет таких значений");
+		}
+</script>
+<body>
+</body>
+</html>

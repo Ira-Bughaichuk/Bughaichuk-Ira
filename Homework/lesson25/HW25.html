@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW-25</title>
+</head>
+<script>
+ /* Variant-1
+ let browser = prompt('', '');
+ if(browser =='Edge'){
+     alert('Твой браузер Edge');
+ }
+ if(browser =='Chrome'){
+     alert('Ваши браузеры');
+ } if(browser =='fireFox'){
+     alert('Ваши браузеры');
+ } if(browser =='Safari'){
+     alert('Ваши браузеры');
+ } if(browser =='Opera'){
+     alert('Ваши браузеры');
+ }
+ else{
+     alert('Таких браузеров к сожалению нет, Вы ошиблись');
+ }*/
+/*variant-2 не виводить:Таких браузеров к сожалению нет, Вы ошиблись(*/
+ let browser = prompt('', '');
+ if(browser =='Edge'){
+     alert('Твой браузер Edge');
+ } else if(browser == 'Chrome', 'fireFox', 'Safari', 'Opera'){
+     alert('Ваши браузеры');
+ }
+ else{
+     alert('Таких браузеров к сожалению нет, Вы ошиблись');
+ }
+
+    /*через for получить 5 значений чисел и  вывести их через alert */
+    /*for(let i=0; i<6; i++){
+        alert(i);
+    }
+    */
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Operators</title>
+</head>
+<script>
+/*больше/меньше a > b, a < b;
+больше/меньше или равно a>= b, a<=b;
+Равно a == b; - равенства (= то это присвоение)
+a !=b - не равно*/
+
+console.log(2 > 1);//true
+console.log(2 == 1);//fals
+console.log(2 != 1);//true
+
+let res = 5 > 4;//true
+console.log(res);
+
+console.log('Я' > 'А');//true
+console.log('Коты' >'Кода');// true
+
+console.log('2' > 1);//true-тому що 2 стає числом
+console.log('01' == 1);//true- 01 стає 1
+
+console.log(true == 1);// true
+console.log(false == 0);//true- бо false це те саме що 0
+console.log(false == 1);//fals
+let a = 1, b = 2;
+console.log(a === b);// нимедленно повертає false без попитки переобразованія
+
+// !== оператор  строгого не равенства, !=
+console.log( null === undefined);//fals
+console.log( null == undefined);// true
+
+
+console.log( null > 0);//false
+console.log( null == 0);//false-?
+console.log( null >= 0);//true
+
+
+console.log( undefined > 0);//false//undefined переобразовує в 0
+console.log( undefined < 0);//false
+console.log( nuundefinedll == 0);//false-?
+
+
+
+
+</script>
+<body>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Operators Binary Unary</title>
+</head>
+<script>
+////
+let x = 1;
+
+x= -x;
+console.log(x);//unary
+
+let x2 = 1, y2 = 3;
+console.log(y2 - x2);// binary
+
+/*
+сложение +
+Вычитание -
+Умножение *
+Деление /
+Взятие остатка от деления %
+Возведение в степень **
+*/
+
+console.log(5 % 2);//1
+console.log(8 % 3);//2
+
+// a ** b 
+console.log(2 ** 2);//4 (2 умножаем на себя 2 раза)
+console.log(2 ** 3);//8 (2*2*2*, 3 раза)
+console.log(2 ** 5); // 32
+
+// Сложение строк при помощи бинарного + 
+
+let s ="моя" + "строка";
+console.log(s);
+
+console.log('1' + 2);//12
+console.log(2 + '1');//21
+
+console.log(2 + 2 + '1');//41
+
+// при відніманні і діленні приводиться до числа
+console.log(6 - '2');//4
+console.log('6' / '2');//3 
+
+
+let a = 1;
+console.log(+a);// 1
+
+let b = -2;
+console.log(+b);// -2
+// прелбразовуют не числа в числа
+console.log(+true); //1
+console.log(+" ");//0
+
+//слажуємо строки
+let apples =  "2";
+let oranges = "3";
+
+console.log(apples + oranges);//23
+
+//переоразовуємо 
+let  apples2 = "2";
+let  oranges2 = "3";
+console.log( +apples2  +  +oranges2);//5  (1+2) *2
+
+//приорітетність
+let r = 2*2 + 1;
+console.log(r);//5
+
+//присвоєнія і переобразованія
+let a2 = 1;
+let b2 = 2;
+
+let c =3 - (a2 = b2+1);
+console.log(a2);//3
+console.log(c);//0
+
+
+// присвоєнія по ципочці
+let q, w, e;
+q = w = e = 2+2;
+console.log(q);//4
+console.log(w);//4
+console.log(e);//4
+
+/*let f = 2;
+f = f +5;
+f = f * 2; */
+//скорочений варіант
+let f = 2;
+f += 5;
+f *= 2;
+console.log(f);
+// инкремент ++ и декремент --(збільшення/зменшення на одну одиницю)
+let count = 2;
+count ++;
+console.log(count);//3
+
+let count2 = 2;
+count2 --;
+console.log(count2);//1
+//декремнт и инкремент применять только переменным, к числовым значением приведет к ошибки
+
+//коли оператор викор після переміної назив протфіксна форма
+let count3 = 1;
+let con = ++count3;
+console.log(con); //2 
+
+
+let count4 = 0;
+++count4;
+count4++;
+console.log(count4);//2
+
+let  count5 = 0;
+console.log(++count5);//1
+
+let  count6 = 0;
+console.log(count6++);//0- тому що протсфіксна форма
+
+let pet = 1, pet2 = 1;
+let pet3 =++pet;
+let pet4 = pet2++;
+console.log(pet3);//2
+console.log(pet4); //1
+
+let count7 = 0;
+++count7;
+count7++;
+console.log(count7);
+
+
+</script>
+<body>
+</body>
+</html>

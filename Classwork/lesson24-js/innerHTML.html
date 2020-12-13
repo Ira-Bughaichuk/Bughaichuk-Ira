@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>innerHTML</title>
+</head>
+
+<body>
+<div id="test1">Текст1</div>
+<div class="test2">Текст2</div>
+<div class="test3">Текст3</div>
+</body>
+<script>
+let test1 = document.getElementById('test1');//присвоїли тобто обращаэмося до id="test"
+test1.innerHTML = "?????";// Текст1 замінили на ?????
+
+let test2 = document.querySelector('.test2');// обращенія через клас, то використовуємо-querySelector
+test2.innerHTML = 'Привет друзья';
+
+let test3 = document.querySelector('.test3');
+test3.innerHTML = '<b>Привет всем!!!</b>';
+</script>
+</html>
