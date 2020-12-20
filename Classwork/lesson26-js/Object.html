@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object</title>
+</head>
+<script>
+//let user = new Object ();//синтаксис конструктора объекта
+//let user = {};// синтаксис литерал объекта-літеральна нотація 
+
+/*let user = {
+	name: "John",                                        //(ключ(папка)-name), (значення(файл)-John)
+	age: 30                                               //(ключ(папка)-age), (значення(файл)-30 )
+	};
+user.Admin = true;
+delete user.age;//удалили свойство
+alert(user.name);
+alert(user.age);
+alert(user.Admin);*/
+
+/*let user ={
+	 name: "John",
+	 age: 30,
+	 "Like World": true
+	};*/
+
+/* не переприсвоїли, а задали нове через це не вибиває  помилку
+const user ={
+	name: "John"
+	};
+user.name ="Alex";
+alert(user.name);*/
+
+/* Обращатись до обєкта через[] коли імя складається не через одне слово,
+let user = {};
+user["Like World"] = true //присвоїли значення до свойству
+alert(user["Like World"]); // через те що 2 слова тому квадратні скобки
+delete user ["Like World"];*/
+
+
+
+/* вичислення іде від користувацького вводу, якщо ми ввводимо name то отримуємо значення user цього свойства і отримуємо доступ до цього свойства через key тому що взаємодіємо з prompt-переміної і обєктом, а отримуємо у квадратних душках
+let user = {
+	name: "Alex",
+	age:30
+	};	
+let key = prompt("Что вы хотите узнать о пользователе", "name");
+alert(user[key]);*/
+
+/*
+    let user = {
+	name: "Alex",
+	age:30
+	};	
+	let key = "name";//ошибка через точку
+	alert(user.key);//undefined*/
+	/*Вичисляти свойство*/
+	let fruit = prompt("Какой купить фрукт","apple");
+	let bag ={
+		[fruit]: 5,
+		};
+		alert(bag.apple);
+</script>
+<body>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+</head>
+<script>
+function muFunction2(){
+	return("Привет Друг");
+	};
+	
+function product (a,b){
+	return a*b;
+	};
+/*function индентификатор(параметр){
+	инструкция или тело функции
+	}*/
+/*function foo(){
+	 alert("Привет друг");
+	};
+foo();
+foo();
+function openbox(id){
+	 display = document.getElementById(id).style.display;
+	 if(display == 'none'){
+		  document.getElementById(id).style.display ="block";
+		 }else{
+			 document.getElementById(id).style.display="none";
+			 }
+	};
+openbox();*/
+</script>
+<body>
+
+<button onclick="myFunction()">Попробуй</button>
+<div id="test"></div>
+</body>
+<script>
+function myFunction(){
+	 document.getElementById("test").innerHTML = "Hello World";
+	};
+
+document.write(muFunction2());
+document.write(product(4,3));
+
+function foo(age){
+	if(age >18){
+		return true;
+		}else{
+			return confirm('А Вам точно разрешили?');
+			}
+	};
+let age = prompt('Сколько Вам лет?', '18');
+if(foo(age)){
+	 alert("доступ открыт");
+	}else{
+		alert("Доступ закрыт");
+		}
+</script>
+</html>

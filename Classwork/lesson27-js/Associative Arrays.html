@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Associative Arrays</title>
+</head>
+<script>
+//let arr = new Map();
+
+let arr = new Map([
+  ['key1', 'value1'],
+  ['key2', 'value2'],
+  ['key3', 'value3']
+]);
+//arr.size;//получить количество  эелементов массива
+arr.set('key4', 'value4');//добавить в массив одну пару ключей и значений
+arr.get('key4');//получить значение
+arr.has('key2');//есть ли в массиве ключ key2
+arr.delete('key3');// удаление ключа и значения
+//arr.clear();//очищает массив
+console.log(arr);
+
+</script>
+<body>
+</body>
+</html>
