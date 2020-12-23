@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CW27</title>
+</head>
+<body>
+<button onclick="myFunction()">Открити</button>
+<button onclick="myFunction2()">Закрити</button>
+<div id="open"></div>
+
+</body>
+<script>
+    //СW1 Дописати ф-цію щоб при повторному визову  то буде скриватися через if/else. Можна закрити дві кнопки одна на закриття а друга на відкриття.=40балів
+function myFunction(){
+     document.getElementById("open").innerHTML = "Hello World";
+};
+function myFunction2(){
+    document.getElementById("open").style.display = "none";
+};
+
+//CW2 -через метод МАР переміної arr 3 масивами. Отримати елмент  помножений на 5. 10baliv
+let arr = [1, 4, 7, 8, 9];
+let result=arr.map(function(elem, index, arr){
+    return elem*5;
+});
+console.log(result);// 5, 20, 35, 40, 45
+
+//
+    
+</script>
+
+</html>
