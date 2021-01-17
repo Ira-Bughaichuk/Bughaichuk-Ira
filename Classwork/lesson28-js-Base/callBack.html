@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>callBack</title>
+</head>
+
+<body>
+<button id="MyBtnFunction">Click me</button>
+</body>
+<script>
+   function Hello(){
+	   console.log("Привет меня зовут Марина");
+	   }
+	function Buy(){
+		console.log("Пока друзья мне пора уходить!!!!!!! Урааааа");
+		}
+	//Hello();
+	
+	
+	function IamKing(HelloCallback, BuyCallback, IamKinkFinish){
+		if(IamKinkFinish){
+		 BuyCallback();
+		}else{
+			HelloCallback();
+			}
+		}
+		
+			
+	IamKing(Hello, Buy, false);
+	
+	
+	/*function sum(a,b){
+		 console.log(a+b);
+		}
+	sum(2,4);*/
+	
+	//let clickMeBtn = document.querySelector("#MyBtnFunction");
+	//clickMeBtn.addEventListener("click", Buy);
+	
+	//setTimeout(Hello, 2000);
+	//setInterval();
+</script>
+</html>

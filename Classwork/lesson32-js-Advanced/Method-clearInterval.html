@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Method clearInterval</title>
+</head>
+
+<body onLoad="start( )">
+<div id="timeMy">Здесь будет время</div>
+<input type="button" value="Stop" onClick="stop()" />
+</body>
+<script>
+    /*onClick="stop()"- визиваємо функцію стоп*/
+    /*onLoad -атрібут для body для того щоб при загрузці сторінки все що знаходиться у боді визивалося функції, start( )-тому що працювати з часом, крім того що воно буде іти ми зможемо його зупиняти   */
+    /*створюємо функцію яка буде загружатися після повної загрузки документа і буде виводитися в id="timeMy" */
+ 
+    function time(){
+	 let dat= new Date();// текущий наш час
+	 let hours = dat.getHours();
+	 let minutes = dat.getMinutes();
+	 let seconds = dat.getSeconds();
+	 times= hours+ ":" +minutes + ":" + seconds;
+	 document.getElementById( "timeMy").innerHTML=times;
+     }
+     /* onLoad -старт начинися коли завершеться загрузка - автоматично*/
+	 function start(){
+		  id=setInterval('time()', 1000);// функцію time буде визиватися кожної сикунди і таким чином у нас буде іти час
+		 }
+	function stop(){
+		clearInterval(id);// щоб ми могли зупинити час-стоп id
+		//clearTimeout(id);
+		}
+</script>
+</html>

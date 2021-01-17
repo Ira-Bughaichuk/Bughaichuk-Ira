@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Main Slider</title>
+<!--<script type="text/javascript" src="js/car.js"></script>-->
+<!--<script type="text/javascript" src="js/custom.js"></script>-->
+</head>
+<style>
+.mainacad-slider{
+	width:800px;
+	margin:0 auto;
+	text-align:center;
+	}
+.mainacad-slider img{
+	max-width: 100%;
+    width: auto;
+    height: auto;
+	}
+</style>
+<body>
+  <div class="mainacad-slider">
+      <img id="slider-img" src="" />
+      <button id="click-prev">Prev</button>
+      <button id="click-next">Next</button>
+  </div>
+  <script>
+   let slider1 ={
+	        imgUrl : [],
+		    currentIndexImg : 0,
+			PrevBtn : document.getElementById('click-prev'),
+			NextBtn : document.getElementById('click-next'),
+			slideImg : document.getElementById('slider-img'),
+			
+			start: function(){
+				let onClickEvent = this;
+			  //Events click button
+			  this.PrevBtn.addEventListener('click', function(e){
+				   onClickEvent.onPrevBtnClick(e);
+			  });
+			  
+			  this.NextBtn.addEventListener('click', function(e){
+				   onClickEvent.onNextBtnClick(e);
+			  });
+		  
+			this.imgUrl.push('https://mport.ua/i/76/15/07/761507/e44abfa9c1735234b808f0dda56c03ae-quality_70Xresize_crop_1Xallow_enlarge_0Xw_1200Xh_643.jpg');
+			this.imgUrl.push('https://classpic.ru/wp-content/uploads/2015/11/6855/Gonochnye-mashiny.jpg');
+			this.imgUrl.push('https://hightech.fm/wp-content/uploads/2019/11/csm_2560x1440px_01_IDR_34Front_66fdc5dcac.jpg');
+			this.imgUrl.push('https://amsrus.ru/wp-content/uploads/2019/10/191022-01-j_003-1200x840.jpg');
+			
+		
+			this.slideImg.src = this.imgUrl[this.currentIndexImg];
+			//this.PrevBtn.disabled = true;
+				},
+			
+			onPrevBtnClick : function (e){//(e)-назва параметра але нічого за собою не несе
+				 this.currentIndexImg --;
+				 this.slideImg.src = this.imgUrlthis[this.currentIndexImg];
+				 this.NextBtn.disabled = false;
+				 
+				 
+				 if(this.currentIndexImg === 0){
+					  this.PrevBtn.disabled = true;
+				   }
+				  },
+				  
+			onNextBtnClick : function (e){
+				this.currentIndexImg ++;
+				this.slideImg.src = this.imgUrl[this.currentIndexImg];
+				this.PrevBtn.disabled = false;
+				
+				if(this.currentIndexImg === (this.imgUrl.length - 1)){
+					this.NextBtn.disabled = true;
+					}
+				
+				  }
+		};
+
+  
+  
+
+	
+
+  </script>
+</body>
+</html>

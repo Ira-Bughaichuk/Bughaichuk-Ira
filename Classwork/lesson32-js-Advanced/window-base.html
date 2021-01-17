@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Window</title>
+</head>
+<script>
+ /*    let fin = 'String';
+	window.alert(fin);*/  //обращєнія до віндов, відкриває вікно і виводить стрінг
+	
+	
+//window.open('https://rozetka.com.ua/');//сказали є вікно і треба відкрити силку
+
+//setTimeout(()=> window.open('https://rozetka.com.ua/'), 3000); // при нажатті на кнопку відкриє сайт через 3 секунди
+
+//window.open(url, name, params); // params-параметр
+/*let params = window.open("https://rozetka.com.ua/", "hello", "width= 200, height=200");
+params.document.write("Hello my people");*/ //при загрузці сторінки вискочить вікно з вказанами параметрами і у якому висвітиться Hello my people 
+
+
+
+</script>
+
+<body>
+  <input type="button" value="Открыть окно newWin" onClick="winOpen()" />
+  <input type="button" value="Проверяем открыто ли окно newWin" onClick="checkOpen()" /><br>
+  <div id="finish"></div>
+</body>
+<script>
+//Свойства Window
+//Closed
+/* newWin = window.open() - метод який викор. для видкрити вікно*/
+let newWin;
+function winOpen( ){
+	 newWin = window.open("https://rozetka.com.ua/", "hello", "width= 200, height=200, left=100, top= 200");
+	}
+function checkOpen(){
+	if(!newWin){
+		 document.getElementById('finish').innerHTML = 'Окно newWin не было открыто';// якщо newWin-перемінна фолс то вікно не було створене і перемінна не задіяна і вивід повідомлення у фініш
+		}else{
+			if(newWin.closed){
+				document.getElementById('finish').innerHTML = 'Окно newWin было закрыто';//
+				}else{
+					document.getElementById('finish').innerHTML = 'Окно newWin открыто в данный момент';
+					}
+			}
+	}
+</script>
+</html>

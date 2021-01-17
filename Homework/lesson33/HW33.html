@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW33</title>
+</head>
+<style>
+    .all{
+        width: 220px;
+    border: brown 2px solid;
+    background-color: cadetblue;
+    }
+    .all input{
+        display: block;
+        line-height: 25px;
+        margin-top: 15px;
+        margin-left: 18px;
+    }
+    .all textarea{
+        display: block;
+        line-height: 25px;
+        margin-top: 15px;
+        width: 170px;
+        margin-left: 18px;
+        margin-bottom: 15px;
+
+    }
+</style>
+<body>
+    <form class="all">
+        <input type="text" name="myinput"  />
+        <input type="text" name="myinput"/>
+      <input type="email" name="myinput" />
+        <input type="tel" name="myinput"  />
+        <input type="text"name="myinput" />
+        <textarea  type="text" name="myinput"></textarea>
+        <button onClick="Name"> Enter</button>
+     </form>
+</body>
+<script>
+    /*1) Создать форму (имя, фамилия, email, телефон, город, текстовое сообщение)
+через name вывести только value(имя, фамилия, город). Имя указать всем*/
+function Name(){
+    let inputs = document.getElementsByName('myinput');
+    for(let i= 0; i<inputs.length; i++){
+        inputs[i].style.border = "2px solid blue";
+    }
+    inputs[0].value = "Name";
+    inputs[1].value = "Surname";
+    inputs[2].value = "E-mail";
+    inputs[3].value = "Tell";
+    inputs[4].value = "City";
+    inputs[5].value = "Message";
+  
+}
+</script>
+</html>

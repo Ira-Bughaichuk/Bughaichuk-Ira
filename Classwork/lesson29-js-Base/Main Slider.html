@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Main Slider</title>
+</head>
+<style>
+.mainacad-slider{
+	width:800px;
+	margin:0 auto;
+	text-align:center;
+	}
+.mainacad-slider img{
+	max-width: 100%;
+    width: auto;
+    height: auto;
+	}
+</style>
+<body>
+  <div class="mainacad-slider">
+      <img id="slider-img" src="" />
+      <button id="click-prev">Prev</button>
+      <button id="click-next">Next</button>
+  </div>
+</body>
+<script>
+	// привязуємо  перемінну (PrevBtn) до кнопки через Id
+  let PrevBtn = document.getElementById('click-prev');
+  let NextBtn = document.getElementById('click-next');
+  let slideImg = document.getElementById('slider-img');
+  
+  // якщо є кнопка то полюбому треба робити собитія Events click button
+  PrevBtn.addEventListener('click', onPrevBtnClick);
+  NextBtn.addEventListener('click', onNextBtnClick);
+  
+  // провірити чи працює кнопка через консоль
+  /*function onPrevBtnClick(){
+	  console.log('click prev');
+  }
+  function onNextBtnClick(){
+	  console.log('click next');
+  }*/
+ 
+  //створити пустий масив щоб через push добавляємо всі силки слайду 
+ let imgUrl  = [];//пустий масив
+ 	imgUrl.push('https://mport.ua/i/76/15/07/761507/e44abfa9c1735234b808f0dda56c03ae-quality_70Xresize_crop_1Xallow_enlarge_0Xw_1200Xh_643.jpg');
+	imgUrl.push('https://classpic.ru/wp-content/uploads/2015/11/6855/Gonochnye-mashiny.jpg');
+	imgUrl.push('https://hightech.fm/wp-content/uploads/2019/11/csm_2560x1440px_01_IDR_34Front_66fdc5dcac.jpg');
+	imgUrl.push('https://amsrus.ru/wp-content/uploads/2019/10/191022-01-j_003-1200x840.jpg');
+	
+	let currentIndexImg = 0;// через currentIndexImg- даємо числовий індекс бо його нам треба передати і краще через перемінну це зробити 
+	//перемінна slideImg привязуємо src і присаюємо imgUrl з currentIndexImg з масивом 0
+	slideImg.src = imgUrl[currentIndexImg];//обявляємо що src зроби так щоб Url був зєднаний з нашим масивом
+	PrevBtn.disabled = true;// спочатку ліва кнопка має бути сіра, щоб не можна було вернутися бо перед 0 масивом нічого немає
+	
+ function onPrevBtnClick(){
+	 currentIndexImg --;// --(шаг назад) ставимо щоб спрацював Prevназад,(++ це шаг вперед)
+	 slideImg.src = imgUrl[currentIndexImg];
+	 NextBtn.disabled = false;// не має дісеблитися бо він має бути активним 
+	 
+	 
+	 if(currentIndexImg === 0){
+		  PrevBtn.disabled = true;
+	   }
+	  }
+	  
+function onNextBtnClick(){
+	 currentIndexImg ++;
+	slideImg.src = imgUrl[currentIndexImg];
+	PrevBtn.disabled = false;// якщо клік відбувся на NextBtn то він має бути активним не має дісеблитися
+	
+	if(currentIndexImg === (imgUrl.length - 1)){// вказуємо довжину щоб після останього фото связь обривалася і кнопка буде сірою не буд як гортати вперед
+		NextBtn.disabled = true;//disabled- остановлює операцію для кнопки, обриває связь коли отримує довжину масива
+		}
+	
+	  }
+</script>
+</html>

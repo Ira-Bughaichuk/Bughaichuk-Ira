@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>moveBy</title>
+</head>
+
+<body>
+<input type="button" value="Открыть окно" onClick="openW()" />
+<input type="button" value="Переместить окно" onClick="moveW()" />
+</body>
+<script>
+    /*можемо передвинути вікно вказану кількість піксалів*/
+let win;
+ function openW(){
+  win = window.open("", "", "width=200, height=200");
+  win.document.write("Я новое окно");
+}
+function moveW(){
+	 win.moveBy(300,200);// перенміщає по горизонталі на 300 піксалів і по вертикалі на 200 пік при нажаті на кнопку
+	 win.focus();// focus()-робить вікно активним
+	}
+</script>
+</html>

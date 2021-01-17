@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Screen</title>
+</head>
+
+<body>
+<div id="userScreen"></div>
+<div id="userScreenwidth"></div>
+<div id="availSizeWindowWidth"></div>
+<div id="availSizeWindowHeight"></div>
+<div id="colorDepth"></div>
+<script>
+let userScreen;
+let userScreenwidth;
+userScreenwidth = "Ширина экрана:" + screen.width;// ширина екрана браузера
+userScreen +="<br />";
+ userScreen = "Высота экрана:" + screen.height;
+ window.document.getElementById("userScreen").innerHTML= userScreen;
+ window.document.getElementById("userScreenwidth").innerHTML= userScreenwidth;
+  
+let availSizeWindowWidth;
+let availSizeWindowHeight;
+availSizeWindowWidth = "Свободная ширина экрана:" + screen.availWidth; 
+availSizeWindowWidth +="<br />"; 
+availSizeWindowHeight = "Свободная ширина экрана:" + screen.availHeight;
+window.document.getElementById("availSizeWindowWidth").innerHTML=  availSizeWindowWidth;
+window.document.getElementById("availSizeWindowHeight").innerHTML=  availSizeWindowHeight;
+
+let colorDepth;
+colorDepth = "Качество цвето передачи:" + screen.colorDepth; 
+window.document.getElementById("colorDepth").innerHTML= colorDepth;
+</script>
+
+</body>
+</html>

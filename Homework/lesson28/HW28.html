@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW28</title>
+</head>
+<body>
+    <div>
+        <input value="Іра" id="first-name" disabled="disabled"/>
+        <label id="lab1" for='first-name' style="display: inline-block;"></label>
+    </div>
+    <div>
+        <input value="Bughaichuk" id="last-name"/>
+        <label id="lab2" for='last-name' style="display: inline-block;"></label>
+    </div>
+    <div>
+        <input value="city" id="city"/>
+        <label id="lab3" for='city-name' style="display: inline-block;"></label>
+    </div>
+    <div>
+        <button id="btn">Click Send</button>
+    </div>
+</body>
+<script>
+//При нажатии на кнопку в форме Click Send возле каждого поля должен выводиться label с такими именами:
+//- Ваше Имя
+//- Ваша Фамилия
+//- Ваш город
+
+
+
+    function changeLabelsText(){
+       // document.getElementById("first-name").disabled = true;
+        //document.getElementById('first-name') - инпут где мы вводит текст
+        //document.getElementById('first-name').value - берем тукст из импута
+        let name = document.getElementById('first-name').value;// присваюємо текс, що знаходиться в інпут
+        let surname = document.getElementById('last-name').value;
+        let city = document.getElementById('city').value; 
+         //для lab
+        let lab1 = document.getElementById('lab1');
+        let lab2 = document.getElementById('lab2');
+        let lab3 = document.getElementById('lab3');
+          //присвоїли свойству  перемінну =вивели 
+        lab1.innerText = name;
+        lab2.innerText = surname;
+        lab3.innerText = city;
+    }
+    // собитія для кнопки
+    btn.onclick = function() {
+    changeLabelsText();
+    }    
+</script>
+</html>

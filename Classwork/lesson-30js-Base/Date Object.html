@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date Object</title>
+</head>
+
+<body>
+<script>
+/*let currentDate = new Date();
+ document.write(currentDate + '<br>');*///вивід
+ 
+/*  let myDate = new Date("30/12/2020");
+ document.write(myDate);*/
+ /*new Date(year, month, date, hours, minutes, seconds, ms);*/
+/*let date = new Date(2018, 0, 1, 0,0,0,0);
+document.write(date + '<br />');*/
+let welcome;
+let myDate = new Date();
+let hour = myDate.getHours();
+let minute = myDate.getMinutes();
+let second = myDate.getSeconds();
+if(minute <10){
+	 minute = "0" + minute;
+	}if(second <10){
+	 second = "0" + second;
+	}if(hour <12){
+	 welcome = "Доброе утро";
+	}else if(hour < 17){
+		 welcome = "Доброе день";
+		}else{
+		 welcome = "Доброе Вечер";
+		}
+document.write(welcome + ", текущее время:" + hour + ":" + minute + ":" + second + "<br/>");
+//Добрій вечер, текущее время:21:24:21
+
+let days = ["Воскресенье", "Понедельник","Вторник","Среда","Четверг","Пятница", "Суббота"];
+let months =  ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+let fullDate = "Сегодня" + " " +  myDate.getDate() + " " +  months[myDate.getMonth()] + " " + myDate.getFullYear() + " ," + " " + days[myDate.getDay()];
+document.write(fullDate);// сегодня 29 декабрь 2020, вторник
+ 
+//get запроси дати, тєкущої дати
+ //getFullYear()//получить год использование из 4 цифр
+//getMonth()// получить месяц от 0 до 11
+//getDate()//получить число месяца от 1 до 31
+//getHours(), getMinutes(), getSeconds(), getMilliseconds()
+//getDay() // 0(воскресенье) до 6 (суббота)
+//getTime() //возвращает число миллисикундах прошедших с 1 января
+//getTimezoneOffset()//возвращает между местным временем UTC в минутах
+
+
+//Методы
+//методы уствнавливают компоненты даты и времени
+/*setFullYear(year[,month,date]);
+setMonth(month[,date]);
+setDate(date);
+setHours(hour[,min,sec,ms]);
+setMinutes(min[,sec,ms]);
+setSeconds(sec[,ms]);
+setMilliseconds(ms);
+setTime(milliseconds);*/
+
+let days2 = ["Воскресенье", "Понедельник","Вторник","Среда","Четверг","Пятница", "Суббота"];
+let months2 =  ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+let myDate2 = new Date();
+myDate2.setDate(05);
+myDate2.setMonth(00);
+myDate2.setYear(2021);
+
+let fullDate2 = "Сегодня" + " " +  myDate2.getDate() + " " +  months2[myDate2.getMonth()] + " " + myDate2.getFullYear() + " ," + " " + days2[myDate2.getDay()];
+document.write(fullDate2);
+
+let dateNow = new Date().toLocalDateString();
+console.log(dateNow.toLocalDateString());
+</script>
+</body>
+</html>

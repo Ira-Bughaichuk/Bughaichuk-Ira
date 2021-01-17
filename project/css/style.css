@@ -95,7 +95,7 @@ font-family: 'vidaloka_regular'; */
     left: 0;
     z-index: 1;
     top: 0;
-    background: url(../img/baner_home.jpg) no-repeat;
+    background: url(../img/baner_home2.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -118,7 +118,10 @@ font-family: 'vidaloka_regular'; */
     color: #fff;
     margin-top: -35px;
 }
-#slider-baner .owl-carousel .owl-theme .item{
+
+
+
+#slider-baner .owl-carousel.owl-theme .item{
     background: url(img/arrow-right.png) no-repeat;
     width:8px;
 	height:13px;
@@ -174,7 +177,10 @@ margin-bottom: 100px;
 .icon_box2{
 margin-right: 32px;
 }
-.icon_box2 i{
+.icon_box2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 font-size: 26px;
 color: #dad9d9;
 transition: 0.3s;/*для наведення*/
@@ -199,6 +205,28 @@ line-height: 25px;
 color: #ffeb3b;/*наведення на будь-яке місце на блоці і буде загорятися колір*/
 }
 /*block2*/
+.block3{
+    background-color: black;
+}
+.box3_block{
+    display: flex;
+    margin-left: 50px;
+}
+.title_box3{
+    color: white;
+    font-size:60px;
+    font-family: 'vidaloka_regular'; 
+    text-align: center;
+    
+}
+.text_box3{
+    font-size: 20px;
+    color: yellow;
+    font-family: 'vidaloka_regular';
+    text-align: center;
+    margin-bottom: 97px;
+}
+
 /*block4*/
 .block4{
 padding: 100px 0px;
@@ -209,18 +237,22 @@ padding: 100px 0px;
     margin-bottom: 35px;
     font-family: 'vidaloka_regular';
 }
-.block4 .text-block2{
+.block4 .text-block3{
     font-size: 16px;
     text-align: center;
     color: #969595; 
     max-width: 750px;
     width: 100%;
-
+    margin: 0 auto;
+	margin-bottom:100px;
 }
 .block4 .nav-tabs{
     border-bottom: inherit;
     margin: 0 auto;
     margin-bottom: 100px;
+}
+.block4 .nav-tabs li{
+margin-right: 10px;
 }
 /*потрібно задати border актів щоб таб не скакав його зробимо полупрозрачним */
 .block4 .nav-tabs li a:hover,
@@ -232,11 +264,8 @@ background-color: #fff;
 border: solid 2px transparent;
 
 }
-.block4 .nav-tabs li{
-margin-right: 10px;
-}
-
 .block4 .nav-tabs li a{
+    transition:0.3s;
     color: #181a1f;
     font-size:14px;
     border-color:inherit;
@@ -266,6 +295,7 @@ margin-right: 10px;
     left: 0;
     bottom: 0;
     height: 100%;
+    width:100%;
     background: rgb(251, 221, 47, 0.8);
     padding: 80px 30px 80px 30px;
 }

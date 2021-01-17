@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CW33</title>
+</head>
+<style>
+</style>
+<body>
+    <input type="button" value="Открыть окно" onClick="openW()" />
+    <input type="button" value="Закрыть окно" onClick="closeW()" />
+</body>
+<script>
+    let wind;
+    function openW(){
+        wind=window.open("about:blank", "window", "width=400, height=300, top=500 left=500");
+        wind.document.write("Привет");
+        wind.opener.document.write("Текст родительского окна");
+    }
+    function closeW(){
+        if(wind !=null)
+        wind.close();
+    }
+</script>
+</html>

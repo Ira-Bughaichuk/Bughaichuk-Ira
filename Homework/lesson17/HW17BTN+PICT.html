@@ -120,40 +120,47 @@
 	}
     .image-blog{
         max-height: 250px;
+        width: 250px;
         overflow: hidden;
-        text-align: center;
-        display: block;
+        margin: 0 auto;
     }
     .item-blog{
 	width:375px;
 	float: left;
 	box-sizing: border-box;
     
+    
 	margin-right: 15px;
 	margin-bottom:40px;
     }
-    /*Для того щоб картинка обрізалася при наведенні у звичному стані треба задати */
-    .content .container .item-blog .image-blog img{
-        transition: all 1s ease-out;
+     /*Для того щоб картинка обрізалася при наведенні у звичному стані треба задати */
+     .content .container .item-blog .image-blog img{
+        -moz-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
     }
-/*Для самого  наведення*/
-.content .container .item-blog .image-blog img:hover{
-    transform:scale(2,2);
+    /*Для самого  наведення*/
+    .content .container .item-blog .image-blog img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
     
     }
      /*при наведені щоб картинка не збільшувалася*/
+	 .content .container .item-blog:nth-child(4) .image-blog:hover,
      .content .container .item-blog:nth-child(2) .image-blog:hover{
-     transform: inherit;
+    
      border-radius:100%;
     }
-    .content .container .item-blog:nth-child(4) .image-blog:hover{
-     transform: inherit;
-     border-radius:100%;
-    }
+	.content .container .item-blog:nth-child(4) .image-blog img:hover,
+	.content .container .item-blog:nth-child(2) .image-blog img:hover{
+		 transform: inherit;
+	}
+
+
+ 
     /**/
-    .pict img{
-        border: #000000 100% solid;
-    }
+   
 
     .item-blog h2{
 	    margin: 13px 0;

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementsByTagName</title>
+</head>
+
+<body>
+<ul>
+<li>Привет</li>
+<li>Добрый день</li>
+<li>Добрый вечер</li>
+</ul>
+<button onClick="elemFunc()">Нажми</button>
+<div id="elems"></div>
+</body>
+<script>
+function elemFunc(){
+	let elem = document.getElementsByTagName("li");// обращєнія до тега li
+	document.getElementById("elems").innerHTML = elem[2].innerHTML;
+	}
+
+
+</script>
+</html>

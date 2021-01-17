@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location</title>
+</head>
+
+<body>
+<h2>Свойства</h2>
+<button type="button" onClick="alert(location)">Получить url</button><br />
+<button type="button" onClick="location='https://rozetka.com.ua'">Перейти на страницу с други  url</button><br />
+<button type="button" onClick="alert(location.origin)">Получить протокол, домен, порт</button><br />
+<button type="button" onClick="alert(location.protocol)">Получить протокол</button><br />
+<button type="button" onClick="alert(location.protocol='https')">Получить на страницу другой протокол</button><br />
+<button type="button" onClick="alert(location.host)">Получить домен и хост</button><br />
+<button type="button" onClick="alert(location.hostname)">Получить домен</button><br />
+<button type="button" onClick="location.hostname='https://rozetka.com.ua' ">Перейти на страницу с другим доменом</button><br />
+<button type="button" onClick="location.port='80'">Получить порт</button><br />
+<button type="button" onClick="alert(location.pathname)">Получить путь к хосту</button><br />
+<button type="button" onClick="alert(location.hash)">Получить якорь</button><br />
+
+<br />
+<br />
+<br />
+<br />
+<h2>Методы</h2>
+<button type="button" onClick="location.replace('https://rozetka.com.ua')"> удалить url из истории посещений и переместить на другую страницу</button><br />
+<button type="button" onClick="location.reload()">обновить страницу без кеша</button><br />
+<button type="button" onClick="location.reload(true)">обновить страницу сервера</button><br />
+<button type="button" onClick="location.assign()">обновить страницу асинхроно</button><br />
+<button type="button" onClick="reloadNew()">Обновить страницу</button>
+</body>
+<script>
+function  reloadNew(){
+	location.reload();
+	}
+</script>
+</html>

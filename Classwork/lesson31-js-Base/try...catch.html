@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>try...catch</title>
+</head>
+
+<body>
+<p>Введите число от  5 до 10:</p>
+<input id="demo" type="text" />
+<button type="button" onClick="myFunction()">Проверка кода</button>
+<div id="errrr"></div>
+<!-- <div id="Rerror"></div>-->
+<div id="demo2"></div>
+</body>
+<script>
+//try..catch
+//try...
+//try..catch..finally
+/*  try{
+	     addddlert('Добро пожаловать!');
+	  }
+catch(err){
+	 document.getElementById("Rerror").innerHTML = err.message;
+		}
+*/  
+  
+  
+ function myFunction(){
+	  let message, x;
+	  message = document.getElementById('errrr');
+	  message.innerHTML= " ";
+	  x = document.getElementById("demo").value;
+	  try{
+		  if(x == " ") throw "пусто";
+		  if(isNaN(x)) throw "не число";
+		  x = Number (x);
+		  if(x<5) throw "слишком мало";
+		  if(x>10) throw "слишком много";
+		  }
+	catch(err){
+		message.innerHTML = "Ошибка" + " " + err;
+		}
+ finally{
+	 document.getElementById("demo").value= " ";
+	 }
+	  }
+	  
+	let num = 1;
+	try{
+		/*num.toPrecision(500);*/
+		//eval("alert('Hello)"); //SyntaxError
+		//num.toUpperCase();//TypeError  мы не можем приобрезовать число верхний регистр
+		decodeURI("%%%");//не можем декодировать символы
+		}
+	catch(err){
+	  document.getElementById("demo2").innerHTML = err.name;
+		}
+		
+</script>
+</html>

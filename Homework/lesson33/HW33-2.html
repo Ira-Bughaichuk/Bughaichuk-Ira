@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>href_window</title>
+</head>
+
+<body>
+    <button type="button" onClick="alert(location)"> Href</button>
+    <input type="button" onClick="openW()" value="Get-href"/>
+</body>
+<script>
+  /*  2) получить ссылку href и передать в новое окно через window open
+- ширина и высота нового окна 400 на 400
+- слева и сверху 500 на 500*/
+function openW(){
+    wind=window.open("about:blank", "width=400, height=400, left=500, top=500");
+    wind.opener.location.href;
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>constructor</title>
+</head>
+<script>
+ function Man(name){ // імя пишеться з великої букви
+	 this.myname = name;
+	 this.play = function (){
+		 console.log('I am play, this boll');
+		 }
+		 //return
+	 }
+	let man = new Man('Andrey');
+	let manlast = new Man('Mark');
+ 
+	man.play();
+	manlast.play();
+	man.play();
+
+</script>
+<body>
+</body>
+</html>

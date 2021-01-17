@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>events callback form</title>
+</head>
+<style>
+.error-input{
+	border:solid 2px red;
+	}
+input{
+	margin-bottom:10px;
+	padding:10px;
+	}
+</style>
+<body>
+<div>
+ <input value="Maryna" id="first-name" />
+ </div>
+ <div>
+ <input value="Basieva" id="last-name" />
+ </div>
+ <div>
+ <input value="Kiev" id="city" />
+</div>
+<div>
+<button id="click-btn">Click Send</button>
+</div>
+<script>
+ function addErrorClass (elementId){
+	  let element = document.getElementById(elementId);
+	  element.className = 'error-input';
+	 }
+	 
+	function addErrorInputs(){
+		addErrorClass('first-name');
+		addErrorClass('last-name');
+		addErrorClass('city');
+		}
+	//addErrorInputs();
+	//window.setTimeout(addErrorInputs, 2000);
+	let sendBtn = document.getElementById('click-btn');
+	sendBtn.addEventListener('click', addErrorInputs);
+	
+	/*function addErrorLastName(){
+		  addErrorClass('last-name');
+		}
+	function onFirstkeyPress(){
+		 addErrorClass('first-name');
+		}
+	let FirstNameNew = document.getElementById('first-name');
+	FirstNameNew.addEventListener('keydown', onFirstkeyPress);*/
+</script>
+</body>
+</html>

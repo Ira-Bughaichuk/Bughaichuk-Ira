@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Name</title>
+</head>
+<style>
+</style>
+<body>
+</body>
+<script>
+   /* 
+  function User(pName, pAge){
+  this.name = pName;
+  this.age = pAge;
+  
+  this.displayInfo = function(){
+      document.write("Імя: "+ this.name + "; Возрост:" + this.age + "</br>");
+  };
+ }
+  let name1 = new User("Vasya", 24);
+  console.log(name1.name);
+  name1.displayInfo();
+*/
+  //1.в constructor.html помимо текста консоли вывести имена которые в файле.
+  function Man(name){ 
+	 this.myname = name;
+	 this.displayInfo = function (){
+        document.write('I am play, this boll');
+		 }
+		
+	 }
+	let man = new Man('Andrey');
+	let manlast = new Man('Mark');
+ 
+   
+    console.log(man.myname);
+    console.log(manlast.myname);
+    man.displayInfo();
+	
+	
+
+
+ 
+     
+  
+</script>
+</html>

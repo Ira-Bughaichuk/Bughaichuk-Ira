@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Method blur</title>
+</head>
+
+<body>
+<input type="button" value="Открыть окно" onClick="OpenW()" />
+</body>
+<script>
+ function OpenW(){
+	 win = window.open("about:blank", "name", "width=200, height=200");// створюємо нове вікно
+	 win.blur();// щоб вікно відкрилось
+	 win.document.writeln("Новое окно");
+	 }
+</script>
+</html>

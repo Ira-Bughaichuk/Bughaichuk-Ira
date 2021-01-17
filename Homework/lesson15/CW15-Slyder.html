@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CW15-Slyder</title>
+<link href="css/all.min.css"  type="text/css" rel="stylesheet"> 
+<link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"  type="text/css" rel="stylesheet">
+<link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"  type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script><!--В первую очередь подключаем билиотеку-->
+<script type="text/javascript" src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script><!--Потом вторую карусель-->
+<script type="text/javascript" src="js/customs.js"></script><!--Третью подключаем наш js файл для настройки-->
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html,
+    body{
+        height: 100%;
+    }
+    .for-page{/*Для прижатия footer*/
+	position:relative;
+	min-height:100%;
+    }
+    .page{/*Для прижатия footer*/
+	    padding-bottom: 58px;
+    }
+    .footer{/*Для прижатия footer*/
+		position:absolute;
+		width:100%;
+		left:0;
+		bottom:0;
+		background:#09084D;
+		padding:20px 0;
+		}
+    .header{
+        width: 20px;
+        background-color: blue;
+    }
+    .container{
+        width: 1170px;
+        margin: 0 auto;
+    }
+    .slide1{
+        background-image: url(img/adidas4.jpg) no-repeat;
+        background-size: cover;
+    }
+    .slide2{
+        background-image: url(img/adidas8.jpg) no repeat;
+        background-size: cover;
+    }
+    #home_sleder.slide1{
+        background-image: url(img/arrow_next.png);
+        width:8px;
+		height:13px;
+		outline:none;
+		position:absolute;
+		    bottom: 300px;
+         left: 16px;
+    }
+    #home_sleder.slide1{
+        background-image: url(img/arrow_prev.png);
+        width:8px;
+		height:13px;
+		outline:none;
+		position:absolute;
+		    bottom: 300px;
+         left: 16px;
+    }
+
+
+
+
+</style>
+<body>
+    <main class="main">
+     <div class="for-page">
+        <div class="page">
+            <header class="header">
+                <div class="container"></div>
+            </header>
+
+            <section class="slyder">
+                <div class="owl-carusel" id="home_sleder">
+                    <div class="item slide1">
+                        <div class="container">
+                            <p>Lorem ipsum dolar 3<span class="test1">Lorem ipsum dolar 1</span></p>
+
+                            <p><span class="test2">Lorem ipsum dolar 2</span></p>
+                        </div>
+                    </div>
+                    <div class="item slide2">
+                        <div class="container">
+                            <p>
+                                Lorem ipsum dolar
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer> slyder</footer>
+        </div>
+     </div>
+    </main>
+</body>
+</html>

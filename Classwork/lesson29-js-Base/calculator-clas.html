@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calculator-clas</title>
+</head>
+<style>
+     .mainacad-calculator{
+		 width:500px; /*фіксована ширина*/
+		 margin:0 auto;
+		 text-align:center;
+		 background:#F9F3A3;
+		 padding:20px;/* внутрішній відступ*/
+		 border:1px solid #000;/*обводка*/
+		 }
+	.mainacad-calculator .buttons-blokc button{/*для самої кнопки*/
+		width:40px;
+		height:40px;
+		margin:20px;/*відступ*/
+		}
+	.mainacad-calculator .inputs-calculator .input-calculator{
+		display:inline-block;
+		padding:10px;
+		}
+		.mainacad-calculator .inputs-calculator .input-calculator label{/*label-строчний тому потрібно задати, щоб label став вище input */
+			display:block;
+			}
+</style>
+<body>
+<div class="mainacad-calculator">
+    <div class="buttons-blokc">
+             <button id="buttonPlus">+</button>
+             <button id="buttonMinus">-</button>
+             <button id="buttonMultiply">*</button>
+             <button id="buttonDivision">/</button>
+          </div>
+          <div class="separation">
+                  <hr />
+          </div>
+          <div class="inputs-calculator">
+                <div class="input-calculator">
+                     <label>Number1</label>
+                     <input type="Number"  id="number1" value="20"/>
+                </div>
+                
+                <div class="input-calculator">
+                     <label>Number2</label>
+                     <input type="Number"  id="number2" value="10"/>
+                </div>
+                
+          </div>
+    </div>
+</body>
+<script>/*1)задаємо переміні для buttonів через Id - привязали кнопки до перемінних */
+    let buttonPlus = document.getElementById('buttonPlus');
+    let buttonMinus = document.getElementById('buttonMinus');
+    let buttonMultiply = document.getElementById('buttonMultiply');
+    let buttonDivision = document.getElementById('buttonDivision');
+
+    /*4)0:41 привязати input, щоб він звязував кнопку + / * - з input через Id */
+    /*створюємо перменну внутрі ф-ції*/
+    function onButtonPlusClick(){
+    let input1 = document.getElementById('number1');
+    let input2 = document.getElementById('number2');
+
+    let number1 = Number(input1.value);
+    let number2 = Number(input2.value);
+    /*value- текстове поле ы воно переводить у строки тому число зложуэться ане додаэться*/
+    /*Щоб це було число потрыбно записати Number(input1.value) або через кондинацыю через +*/
+    
+    /*і щоб воно пощитало*/
+    
+    let sum = number1 + number2;
+    /*виводимо - sum через alert */
+    window.alert(sum);
+
+    console.log('onButtonPlusClick');
+    }
+/*пробний варыант але довгий див файл-calculator*/
+    /*2)ф-ція щоб можна перевірити чи воно відпрацьовує через консоль.лог*/
+    function onButtonPlusClick(){
+    let input1 = document.getElementById('number1');
+    let input2 = document.getElementById('number2');
+    let number1 = Number(input1.value);
+    let number2 = Number(input2.value);
+    let sum = number1 + number2;
+    window.alert(sum);
+    console.log('onButtonPlusClick');
+    }
+
+    function onButtonMinusClick(){
+        let input1 = document.getElementById('number1');
+    let input2 = document.getElementById('number2');
+    let number1 = Number(input1.value);
+    let number2 = Number(input2.value);
+    let Minus = number1 - number2;
+    window.alert(Minus);
+    console.log('onButtonMinusClick');
+    }
+
+    function onButtonMultiplyClick(){
+     let input1 = document.getElementById('number1');
+    let input2 = document.getElementById('number2');
+    let number1 = Number(input1.value);
+    let number2 = Number(input2.value);
+    let Multiply = number1 * number2;
+    window.alert(Multiply);
+    console.log('onButtonMultiplyClick');
+    }
+
+    function onButtonDivisionClick(){
+    let input1 = document.getElementById('number1');
+    let input2 = document.getElementById('number2');
+    let number1 = Number(input1.value);
+    let number2 = Number(input2.value);
+    let Division = number1 / number2;
+    window.alert(Division);
+    console.log('onButtonDivisionClick');
+    }
+
+    /*3) створити собитія, щоб при нажатті на кнопку відпрацьовувало*/
+/*перемінна.addEventListener(собитія-'click', назва ф-ції-onButtonPlusClick) */
+/*написали назву ф-ції щоб визвати по кліку  */	
+buttonPlus.addEventListener('click', onButtonPlusClick);
+buttonMinus.addEventListener('click', onButtonMinusClick);
+buttonMultiply.addEventListener('click', onButtonMultiplyClick);
+buttonDivision.addEventListener('click', onButtonDivisionClick);
+/*4)0:41 привязати input, щоб він звязував кнопку + / * - з input через Id */
+let input1 = document.getElementById('number1');
+let input2 = document.getElementById('number2');

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calculator</title>
+</head>
+<style>
+     .mainacad-calculator{
+		 width:500px; /*фіксована ширина*/
+		 margin:0 auto;
+		 text-align:center;
+		 background:#F9F3A3;
+		 padding:20px;/* внутрішній відступ*/
+		 border:1px solid #000;/*обводка*/
+		 }
+	.mainacad-calculator .buttons-blokc button{/*для самої кнопки*/
+		width:40px;
+		height:40px;
+		margin:20px;/*відступ*/
+		}
+	.mainacad-calculator .inputs-calculator .input-calculator{
+		display:inline-block;
+		padding:10px;
+		}
+		.mainacad-calculator .inputs-calculator .input-calculator label{/*label-строчний тому потрібно задати, щоб label став вище input */
+			display:block;
+			}
+</style>
+<body>
+<div class="mainacad-calculator">
+    <div class="buttons-blokc">
+             <button id="buttonPlus">+</button>
+             <button id="buttonMinus">-</button>
+             <button id="buttonMultiply">*</button>
+             <button id="buttonDivision">/</button>
+          </div>
+          <div class="separation">
+                  <hr />
+          </div>
+          <div class="inputs-calculator">
+                <div class="input-calculator">
+                     <label>Number1</label>
+                     <input type="Number"  id="number1" value="20"/>
+                </div>
+                
+                <div class="input-calculator">
+                     <label>Number2</label>
+                     <input type="Number"  id="number2" value="10"/>
+                </div>
+                
+          </div>
+    </div>
+</body>
+<script>/*1)задаємо переміні для buttonів через Id - привязали кнопки до перемінних */
+let buttonPlus = document.getElementById('buttonPlus');
+let buttonMinus = document.getElementById('buttonMinus');
+let buttonMultiply = document.getElementById('buttonMultiply');
+let buttonDivision = document.getElementById('buttonDivision');
+
+/*4)0:41 привязати input, щоб він звязував кнопку + / * - з input через Id */
+let input1 = document.getElementById('number1');
+let input2 = document.getElementById('number2');
+
+/*повертаэмо через ф-цию*/
+ /*value- текстове поле ы воно переводить у строки тому число зложуэться ане додаэться*/
+/*Щоб це було число потрыбно записати Number(input1.value) або через кондинацыю через +*/
+function OperationCalc(codeOperation){
+	   let number1 = Number(input1.value);
+	   let number2 = Number(input2.value);
+	let sum;
+	if(codeOperation === '+'){
+		    sum = number1 + number2;
+		}else if (codeOperation === '-'){
+			sum = number1 - number2;
+		}else if (codeOperation === '*'){
+			sum = number1 * number2;
+		}else if (codeOperation === '/'){
+			sum = number1 / number2;
+			}else{
+				window.alert('Такой операции нет');
+				}
+
+	     window.alert(sum);
+	}
+/*2)ф-ція щоб можна перевірити чи воно відпрацьовує через консоль.лог*/
+/*переміна внутрі ф-ції*/
+function onButtonPlusClick(){
+    OperationCalc('+');
+	}
+	
+function onButtonMinusClick(){
+	 OperationCalc('-');
+	}
+	
+function onButtonMultiplyClick(){
+	 OperationCalc('*');
+	}
+	
+function onButtonDivisionClick(){
+	 OperationCalc('/');
+	}
+/*3) створити собитія, щоб при нажатті на кнопку відпрацьовувало*/
+/*перемінна.addEventListener(собитія-'click', назва ф-ції-onButtonPlusClick) */
+/*написали назву ф-ції щоб визвати по кліку  */	
+buttonPlus.addEventListener('click', onButtonPlusClick);
+buttonMinus.addEventListener('click', onButtonMinusClick);
+buttonMultiply.addEventListener('click', onButtonMultiplyClick);
+buttonDivision.addEventListener('click', onButtonDivisionClick);
+</script>
+
+</html>

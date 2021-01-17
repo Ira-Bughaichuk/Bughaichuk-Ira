@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>close</title>
+</head>
+
+<body>
+<input type="button" value="открыть окно" onClick="openW()" />
+<input type="button" value="закрыть окно" onClick="closeW()" />
+</body>
+<script>
+    /*при нажатті на кнопку відкривається і закривається вікно*/
+let win;
+function openW(){
+	win=  window.open("about:blank", "win", "width=200,  height=200, top=400, left=400");
+	}
+function closeW(){
+	if(win != null)
+	win.close();
+	}
+</script>
+</html>

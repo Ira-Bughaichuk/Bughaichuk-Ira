@@ -1,0 +1,294 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu2</title>
+<link href="Classswork/lesson13/vendor/fontawesome/css/all.min.css"  type="text/css" rel="stylesheet"> 
+
+<link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"  type="text/css" rel="stylesheet">
+<link href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"  type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script><!--В первую очередь подключаем билиотеку-->
+<script type="text/javascript" src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script><!--Потом вторую карусель-->
+<script type="text/javascript" src="js/customs.js"></script><!--Третью подключаем наш js файл для настройки-->
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html,/*Для прижатия footer*/
+body{
+	height:100%;
+	}
+.for_page{/*Для прижатия footer*/
+	position:relative;
+	min-height:100%;
+	}
+.page{/*Для прижатия footer*/
+	    padding-bottom: 58px;
+	}
+    .container{
+        width: 1170px;
+        margin: 0 auto;
+    }
+    .fr{
+        float: right;
+    }
+    .fl{
+        float: left;
+    }
+    .clear{
+        clear: both;
+    }
+    .logo{
+        width: 20%;
+    }
+    img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+    .header{
+        margin-top: 15px;
+    }
+    .clock_work{
+        width: 25%;
+        text-align: center;
+        padding-top: 70px;
+        color: darkorange;
+    }
+    .adress_main i{
+        font-size: 19px;
+        color:rgb(38, 0, 255);
+        padding-right: 3px;
+    }
+    .phone_main a{
+        font-size: 19px;
+    
+        padding-right: 3px;  
+    }
+    .clock_work i{
+        font-size: 19px;
+        color:rgb(38, 0, 255);
+        padding-right: 3px;
+    }
+    .clock_work span{
+        line-height: 5px;
+        color:red;
+    }
+    .phone_main{
+        width: 33%;
+        padding-top: 70px; 
+        text-align: center;  
+        color:rgb(38, 0, 255);
+    }
+    .phone_main a{
+        color: #333333;
+        text-decoration: none;  
+    }
+    .phone_main:hover{
+       color: blueviolet; 
+    }
+    .adress_main{
+        text-align: center;
+        padding-top: 70px;
+        font-size: 19px;
+        color:red;
+        } 
+    .nav-menu{
+        width: 100%;
+        background-color: teal;
+        margin-top: 15px;
+        
+    }
+    ul.menu-main  li.item-menu{
+        list-style: none;
+        float:left;
+
+    }
+    ul.menu-main  li.item-menu a{
+        text-decoration: none;
+        color:white;
+        font-size: 14px;
+        padding: 20 15;
+        display: block;
+    }
+    ul.menu-main  li.item-menu  a:hover{
+        color: yellow;
+    }
+    ul.menu-main li.item-menu:nth-child(3){
+        position:relative;
+    }
+    ul.menu-main li.item-menu:nth-child(3) ul.child-menu-item{
+        position:absolute;
+        background: teal;
+        width: 149px;
+        display: none;
+    }
+    ul.menu-main li.item-menu:nth-child(3):hover ul.child-menu-item{
+        display: block;
+
+    }
+    ul.menu-main li.item-menu ul.child-menu-item li{
+        float: inherit;
+    }
+    ul.menu-main li.item-menu ul.child-menu-item li a{
+        padding: 9px 15px;
+    }
+    /*slide*/
+    .slide1{
+        background: url(img/adidas1.jpg) no-repeat;
+        background-size: cover;
+        
+    }
+    .slide2{
+        background: url(img/adidas2.jpg) no-repeat;
+        background-size: cover;
+        padding: 200 0;
+    }
+    .item h2{
+		font-size:50px;
+		margin-bottom:20px;
+		}
+	.text_slider{
+		font-size:30px;
+		font-style:italic;
+		}
+	#home_slider.owl-carousel .owl-nav .owl-prev{
+		background:url(img/arrow_prev.png) no-repeat;
+		width:8px;
+		height:13px;
+		outline:none;
+		position:absolute;
+		    bottom: 300px;
+         left: 16px;
+		}
+	#home_slider.owl-carousel .owl-nav .owl-next{
+		background:url(img/arrow_next.png) no-repeat;
+		width:8px;
+		height:13px;
+		outline:none;
+		position:absolute;
+		    bottom: 300px;
+        right: 16px;
+		}
+	#home_slider.owl-carousel .owl-nav .owl-prev:hover,
+	#home_slider.owl-carousel .owl-nav .owl-next:hover{
+		opacity:0.6;
+		}
+	.box_text{
+		width:40%;
+		float:left;
+		font-size:16px;
+		font-style:italic;
+		line-height: 24px;
+		    margin-top: 130px;
+		}
+	.img_block2{
+		width:60%;
+		float:left;
+		    box-sizing: border-box;
+		}
+	.block2{
+		padding:60px 0;
+		}
+	.img_block2 img{
+		display:block;
+		margin:0 auto;
+		}
+	.footer{/*Для прижатия footer*/
+		position:absolute;
+		width:100%;
+		left:0;
+		bottom:0;
+		background:#09084D;
+		padding:20px 0;
+		}
+	/*slide*/
+    
+
+
+</style>
+    <body>
+        <main class="main">
+            <div class="for_page">
+                <div class="page">
+                    <header class="header">
+                        <div class="container">
+                            <div class="logo fl">
+                                <a href="/">
+                                <img class="logo-site" src="img/adidas.png" alt=" Логотип | https://site.com.ua" title="Логотип"/>
+                            </a>
+                            </div>
+                            <div class="clock_work fl">
+                                <i class="fas fa-user-clock"></i> <span>9 до 18</span>
+                            </div>
+
+                            <div class="phone_main fl">
+                                <i class="fas fa-phone-volume"></i>
+                                <a href="tel:+380987153208"> + (38) 0987153208 </a> 
+                            </div>
+
+                            <div class="adress_main fl">
+                                <i class="fas fa-address-card"></i>
+                                city Kyiv, office-33
+
+                            </div>
+                            <div class="clear"> 
+
+                            </div>
+                        </div>
+                        <nav class="nav-menu">
+                            <div class="container">
+                                <ul class="menu-main">
+                                    <li class="item-menu"><a href="item-link active">Головна</a> </li>
+                                    <li class="item-menu"><a href="item-link"> Про компанію</a> </li>
+                                    <li class="item-menu"><a href="item-link"> Каталог</a> 
+                                    <ul class="child-menu-item">
+                                        <li class="item-menu"><a href="item-link active">Кросовки</a></li>
+                                        <li class="item-menu"><a href="item-link active">Сандалі</a></li>
+                                        <li class="item-menu"><a href="item-link active">Кєди</a></li>
+                                        <li class="item-menu"><a href="item-link active">Балєтки</a></li>
+                                        <li class="item-menu"><a href="item-link active">Ботінки</a></li>
+
+                                    </ul> 
+                                    </li>
+                                    <li class="item-menu"><a href="item-link"> Новини</a> </li>
+                                </ul>
+                                <div class="clear"> </div>
+
+                            </div>
+                        </nav>
+
+                        <section class="slider">
+                            <div class="owl-carousel" id="home_slider">
+                                   <div class="item slide1">
+                                           <div class="container">
+                                             <h2>По низкой цене</h2>
+                                             <div class="text_slider">
+                                                <p>Lorem ipsum dolar 3<span class="test1">Lorem ipsum dolar 1</span></p>
+
+                                                <p><span class="test2">Lorem ipsum dolar 2</span></p>
+                                             </div>
+                                           </div>
+                                   </div>
+                                   <div class="item slide2">
+                                           <div class="container">
+                                              <h2>На все скидка 50%</h2>
+                                              <div class="text_slider">На все товары -50%. Акция до 30 октября!!!!</div>
+                                           </div>
+                                   </div>
+                             </div>
+                        </section>
+                      
+                    </header>
+                </div>
+                <footer class="footer">
+                    copyright 2020
+                </footer>
+            </div>
+        
+    </body>
+</html>

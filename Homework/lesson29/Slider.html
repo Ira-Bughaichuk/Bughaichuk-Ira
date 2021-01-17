@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slider</title>
+</head>
+<style>
+    .main-slider{
+        width:800px;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    .main-slider img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+
+    }
+    .slider-icon{
+        width:100px;
+        display: flex;
+        margin-top: 50px;
+    }
+    .slider-icon img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin: 25px;
+        justify-content: center;
+
+    }
+</style>
+<body>
+    <div class="main-slider">
+        <img id="slider-img" src="/"/>
+
+        <button id="click-prev">Prev</button>
+        <button id="click-next">Next</button>
+
+        <div class="slider-icon">
+            <img src="https://st.depositphotos.com/1079320/1375/i/600/depositphotos_13752894-stock-photo-winter-friends.jpg" alt="1"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw7qJB8ffeSD_2AvZoS42kx2YsY6vR8J4fGQ&usqp=CAU" alt="2"/>
+            <img src="https://fotodomov.com/wp-content/uploads/2014/01/dom-zimoy1.jpg" alt="3"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh5Sy8u6flePTdBEr-5DWBV5dbWWNnXQczHQ&usqp=CAU" alt="4"/>
+        </div>  
+    </div>
+</body>
+<script>
+    let PrevBtn = document.getElementById('click-prev');
+    let NextBtn = document.getElementById('click-next');
+    let slideImg = document.getElementById('slider-img');
+
+    PrevBtn.addEventsListener('click', onPrevBtnClick);
+    NextBtn.addEventsListener('click', onNextBtnClick);
+
+     // провірити чи працює кнопка через консоль
+  /*function onPrevBtnClick(){
+	  console.log('click prev');
+  }
+  function onNextBtnClick(){
+	  console.log('click next');
+  }*/
+
+  let imgUrl = [];
+  imgUrl.push('https://st.depositphotos.com/1079320/1375/i/600/depositphotos_13752894-stock-photo-winter-friends.jpg');
+  imgUrl.push('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw7qJB8ffeSD_2AvZoS42kx2YsY6vR8J4fGQ&usqp=CAU');
+  imgUrl.push('https://fotodomov.com/wp-content/uploads/2014/01/dom-zimoy1.jpg');
+  imgUrl.push('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh5Sy8u6flePTdBEr-5DWBV5dbWWNnXQczHQ&usqp=CAU');
+
+  let sliderIcons = document.querySelectorAll('slider-icon');
+  for(let i=0; i < sliderIcons.length; i++){
+      console.log(sliderIcons [1]);
+      sliderIcons[1].src = imgUrl[i];
+  }
+
+  let currentIndexImg = 0;
+  sliderImg.src = imgUrl[currentIndexImg];
+  PrevBtn.disabled = true;
+
+  function showImage( id, i){
+    sliderImg.src = document.getElementById(id).src;
+    currentIndex = i; 
+  }
+
+  function onPrevBtnClick(){
+    currentIndexImg --;
+    sliderImg.src = imgUrl[currentIndexImg];
+    NextBtn.disabled = false;
+    if(currentIndexImg ===0){
+        PrevBtn.disabled = true;
+    }
+  }
+  function onNextBtnClick(){
+	 currentIndexImg ++;
+	slideImg.src = imgUrl[currentIndexImg];
+	PrevBtn.disabled = false;
+	if(currentIndexImg === (imgUrl.length - 1)){
+		NextBtn.disabled = true;
+		}
+	
+      }
+      for (let i = 0; i < sliderIconsImg.length; i++){
+          sliderIconsImg[i].addEventListener('click', function() {showImages(sliderIconsImg[i]. id, i);});
+      }
+
+</script>
+</html>

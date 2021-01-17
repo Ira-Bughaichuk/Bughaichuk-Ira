@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#but1 {
+	position:fixed;
+	top:5px;
+	left:260px;
+	}
+#but2 {
+	position:fixed;
+	bottom:5px;
+	left:260px;
+	}
+</style>
+
+</head>
+<body>
+<input id="but1" type="button" value="Прокрутить содержимое окна вверх" onclick="scrollup()" />
+<input id="but2" type="button" value="Прокрутить содержимое окна вниз" onclick="scrolldown()" />
+<p>Текст. Текст. Текст. И еще раз текст. </p>
+<br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br />
+<p>Текст. Текст. Текст. И еще раз текст. </p>
+<br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br />
+<p>Текст. Текст. Текст. И еще раз текст. </p>
+<br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br />
+<p>Текст. Текст. Текст. И еще раз текст. </p>
+<br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br />
+<p>Текст. Текст. Текст. И еще раз текст. </p>
+<br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br />
+<p>Текст. Текст. Текст. И еще раз текст. </p>
+<br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br />
+</body>
+<script>
+function scrolldown(){
+scrollBy(0,100);
+}
+function scrollup(){
+scrollBy(0,-100);
+}
+</script>
+</html>

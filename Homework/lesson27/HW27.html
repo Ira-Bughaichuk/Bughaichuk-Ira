@@ -4,21 +4,55 @@
 <meta charset="UTF-8">
 <title>HW27</title>
 </head>
+<script>
+    //создать параграф под низом кнопка больше при нажатии открывается параграф, кнопка после этого называется закрыть при нажатии на кнопку параграф закрывается
+     document.getElementById("text").style.display="none";
+    function GetText(id, id1){
+    if (document.getElemntById(id).style.display ="none"){
+        document.getElementById(id).style.display="block";
+        document.getElementById(id1).innerHTML="Close";
+        }else{
+
+    document.getElementById(id).style.display="none";
+    document.getElementById(id1).innerHTML="Open";
+     };
+}
+</script>
 <body>
-   
-    <button id="btn" onclick="MyFunction()">Open</button>
     
-   <div id="text">mdfsmfm</div>
-    <button id="btn" onclick="MyFunction2()">Close</button>
-    <div id="text">mdfsmfm</div>
+   <h2>Frontend</h2>
+   <div id="text" style="display: none;">_</div>
+    <button  onclick="GetText('text', 'btn')" id="btn">Open</button>
 </body>
 <script>
-/*function MyFunction(){
-    document.getElemntById(btn).innerHTML ="mdfsmfm";
-};
-function MyFunction2(){
-    document.getElementById(btn).style.display="none";
-};*/
+
+/*//Ассоциативные массивы
+let arr2= new Map([
+    ['key1', 'value1'],
+    ['key2', 'value2'],
+    ['key3', 'value3']
+]);
+arr.set('key4', 'value4');
+arr.set('key5', 'value5');
+arr.length; //5
+arr.delete('key2');
+arr.delete('key5');
+arr.clear();
+console.log(arr2);
+
+//Метод Map
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+let result= arr.map(function(elem){
+return elem/5;
+});
+console.log(result);
+
+//функцию  через Match получить максимальное число (5, 80, -44, 120,60,-5, 206)
+let arr1 = Math.max(5, 80, -44, 120,60,-5, 206);
+console.log(arr1);//206*/
+
+
+
 
 
 </script>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+</head>
+<style>
+    .all{
+        width: 200px;
+        height: 200px;
+        border: brown 2px solid;
+        background-color: cadetblue;
+        margin-top: 149px;
+        margin-left: 462px;    
+    }
+
+    .all input {
+        display: block;
+       margin-top: 10px; 
+      margin-left: 10px;
+      margin-right: 10px;
+        text-align: center;
+        height: 30px;
+    }
+    .all button {
+        display: block;
+    height: 36px;
+    width: 176px;
+    text-align: center;
+    line-height: 26px;
+    margin-top: 11px;
+    margin-left: 11px;
+</style>
+<body>
+    <form class="all">
+        <input  id="name" type="text" name="username" placeholder="Ваше імя"/>
+        <label id="lab1"></label>
+        <input id="lastname" type="text" name="lastname" placeholder="Ваша фамілія"/>
+        <label id="lab2"></label>
+        <input id="email" type="email" name="email" placeholder="E-mail">
+        <label id="lab3"></label>
+        
+        <button type="button" onclick="eror">open</button>
+    </form>
+</body>
+<script>
+  function eror(){
+
+      let text, message;
+      message = document.getElementById("lab1");
+      message.innerHTML="Введите Имя";
+      text = document.getElementById("name").value;
+
+      try{
+          if(text=="")throw "";
+          if(isNaN(text)) throw "";
+          text=toString;
+
+      }
+  
+
+
+  }
+</script>
+</html>
