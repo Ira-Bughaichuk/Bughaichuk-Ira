@@ -121,7 +121,7 @@ font-family: 'vidaloka_regular'; */
 
 
 
-#slider-baner .owl-carousel.owl-theme .item{
+#slider-baner .owl-carousel.owl-theme .prev{
     background: url(img/arrow-right.png) no-repeat;
     width:8px;
 	height:13px;
@@ -129,8 +129,11 @@ font-family: 'vidaloka_regular'; */
 	position:absolute;
 	bottom: 300px;
     right: 16px;
+    z-index: 1;
+    top:150px;
+    cursor: pointer;
 }
-#slider-baner .owl-carousel .owl-theme{
+#slider-baner .owl-carousel .owl-theme .next{
     background: url(img/arrow-left.png) no-repeat;
     width:8px;
 	height:13px;
@@ -138,10 +141,14 @@ font-family: 'vidaloka_regular'; */
 	position:absolute;
 	bottom: 300px;
     left: 16px;
+    z-index: 1;
+    top:150px;
+    cursor: pointer;
+    right: 16px;
 }
-#slider-baner .owl-carousel .owl-theme:hover,
-#slider-baner .owl-carousel .owl-theme:hover{
-    opacity:0.6;
+#slider-baner .owl-carousel .owl-theme .prev:hover,
+#slider-baner .owl-carousel .owl-theme .next:hover{
+    opacity:1;
 }
 
 
@@ -178,11 +185,6 @@ margin-bottom: 100px;
 margin-right: 32px;
 }
 .icon_box2 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-font-size: 26px;
-color: #dad9d9;
 transition: 0.3s;/*для наведення*/
 }
 .content_box2{
@@ -201,16 +203,21 @@ color: #969595;
 line-height: 25px;
 }
 
-.box2_block:hover .icon_box2{
+.box2_block:hover .icon_box2 img{
 color: #ffeb3b;/*наведення на будь-яке місце на блоці і буде загорятися колір*/
 }
 /*block2*/
 .block3{
-    background-color: black;
+    background: url(../img/fon.jpg) no-repeat;
+    
 }
+
 .box3_block{
-    display: flex;
+    
     margin-left: 50px;
+}
+.content_box3{
+
 }
 .title_box3{
     color: white;
@@ -220,11 +227,23 @@ color: #ffeb3b;/*наведення на будь-яке місце на бло�
     
 }
 .text_box3{
-    font-size: 20px;
+    font-size: 19px;
     color: yellow;
     font-family: 'vidaloka_regular';
     text-align: center;
-    margin-bottom: 97px;
+    padding-bottom: 97px;
+    padding-top: 30px;
+}
+.icon_box3{
+   /* display: flex;
+    justify-content: center;*/
+}
+.icon_box3 img{
+ /*margin: auto;*/
+    padding-bottom: 40px;
+    padding-left:74px;
+    padding-top: 94px;
+
 }
 
 /*block4*/
@@ -237,7 +256,7 @@ padding: 100px 0px;
     margin-bottom: 35px;
     font-family: 'vidaloka_regular';
 }
-.block4 .text-block3{
+.block4 .text-block4{
     font-size: 16px;
     text-align: center;
     color: #969595; 
@@ -248,7 +267,7 @@ padding: 100px 0px;
 }
 .block4 .nav-tabs{
     border-bottom: inherit;
-    margin: 0 auto;
+    margin: 0 auto;/* зробити кнопки по центру*/
     margin-bottom: 100px;
 }
 .block4 .nav-tabs li{
@@ -256,12 +275,12 @@ margin-right: 10px;
 }
 /*потрібно задати border актів щоб таб не скакав його зробимо полупрозрачним */
 .block4 .nav-tabs li a:hover,
-.block4 .nav-tabs li a .active{ 
+.block4 .nav-tabs li a.active{  
 color: #181a1f;
 font-size:14px;
 border-color:inherit;
 background-color: #fff;
-border: solid 2px transparent;
+border: solid 2px transparent;/*полупрозрачність*/
 
 }
 .block4 .nav-tabs li a{
@@ -270,12 +289,12 @@ border: solid 2px transparent;
     font-size:14px;
     border-color:inherit;
     background-color: #fff;
-    border: solid 2px t#ffda00;
+    border: solid 2px #ffda00;
     padding: 20px 35px;
 }
 .block4 .nav-tabs .nav-link{
     
-    border-top-left-radius: inherit; 
+    border-top-left-radius: inherit; /*щоб не було заокругленості*/
     border-top-right-radius: inherit; 
 }
 .img_galery1{
@@ -309,7 +328,7 @@ border: solid 2px transparent;
     width: 24.7%;
 }
 .img_galery2{
-    
+    width: 70%;
     display: flex;
 }
 .img_galery img{
@@ -363,3 +382,355 @@ margin-top: 28px;
 
 }
 /*block4*/
+/*block5*/
+.block5{
+    padding: 100px 0px;
+    
+    }
+    .block5 h2{
+        font-size: 36px;
+        text-align: center;
+        padding-bottom: 45px;
+        font-family: 'vidaloka_regular';
+    }
+    .text_block5 p{
+        font-size: 16px;
+        text-align: center;
+        color: #969595; 
+        max-width: 750px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom:100px;
+    }
+    .content_box5{
+        position: relative;
+        box-sizing: border-box;
+
+    }
+    .content_box5 img{
+        padding-bottom: 20px;
+        height: 300px;
+        width: 360px;
+        box-sizing: border-box;
+
+    }
+    .title_box5{
+        position:absolute;
+        top:63px;
+        
+        color: white;
+        font-size: 20px;
+        font-family: 'vidaloka_regular';
+        display: block;
+        max-width: 360px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        transition: 0.3s;
+
+    }
+    .text_box5{
+        position:absolute;
+        top:130px;
+        left:12px;
+        
+        text-align: center;
+        color: white;
+        line-height:25px;/*відстань між рядками*/
+        font-family: 'vidaloka_regular';
+        display: block;
+        transition: 0.3s;
+    }
+    .silk a{
+        position:absolute;
+        bottom:80px; 
+        text-align: center;
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        display: block;
+        outline: none;
+        transition: 0.3s;
+    }
+    .silk a:hover{
+        color:rgb(251, 221, 47, 0.8); 
+        text-decoration: underline;
+    }
+    .text_box5 p:hover,
+    .title_box5 p:hover{
+        color: black;
+    }
+    /*bloke5*/
+    /*block6*/
+    .block6{
+        position: relative;
+
+        box-sizing: inherit;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        background: url(../img/black-fon2.jpg) no-repeat;
+    
+        
+    }
+    .title_box6 h2{
+        font-size: 32px;
+        left: 130px;
+        top: 140px;
+        color: white;
+        font-family: 'vidaloka_regular';
+        padding-top: 100px;
+
+    }
+    .title_box6 p{
+        display: block;
+        font-size: 16px;
+        left: 130px;
+        top: 160px;
+        color: white;
+        font-family: 'vidaloka_regular';
+        padding-top: 50px;
+    }
+    .slider_block6{
+        
+        display:flex;/*щоб постаити картинку по центрі*/
+        justify-content: center;/*щоб постаити картинку по центрі*/
+    }
+    .owl-carousel6 .block6-item img{
+        margin: 0 auto;
+    }
+    
+    
+
+    .block6-item{
+        max-width:400px;
+        width: 0 auto;
+        height: 0 auto;  
+    }
+  
+    /*block6*/
+
+    /*block7*/
+    .block7{
+        padding-top: 130px;/*через це що задавали для блоку зверху абсолют тому щоб не підскакував блок до верху пишемо ці дві строки*/
+        /*padding-bottom: 100px;*/
+    }
+    .block7 .title_box7 h2{
+        font-size: 36px;
+        color: black;
+        margin-top: 35px;
+        font-family: 'vidaloka_regular';
+        text-align: center;
+    }
+    .block7 .title_box7 p{
+        font-size: 16px;
+        text-align: center;
+        color: #969595; 
+        max-width: 750px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom:100px;
+        margin-top: 33px;
+        line-height: 17px;
+        font-family: 'vidaloka_regular';
+    }
+    .items_box7{
+        border:solid 1px #dad9d9;
+    }
+    .block7_items1 img{
+        max-width: 100%;
+        width: 0 auto;
+        height: 0 auto;
+    }
+    .block7_items1 h2{
+        font-size: 20px;
+        color: black;
+        margin-top: 30px;
+        font-family: 'vidaloka_regular';
+        text-align: center;
+    }
+    .block7_items1 p{
+        font-size: 15px;
+        text-align: center;
+        color: #969595; 
+        margin-top: 20px;
+        line-height: 25px;
+        font-family: 'vidaloka_regular';
+    }
+    .content_box7{
+        border-top: solid 1px #dad9d9;/*створення горизонтальноъ лінії між логотипом і текстм в блоці*/
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 30px;
+    }
+    .icons_box7{
+        /*display: inline-block;
+        margin: 0 auto;  */
+        /*display: inline-flex;*/
+        margin-left: 108px;
+    }
+    .icons_box7 img{
+        max-width: 100%;
+        width: 0 auto;
+        height: 0 auto;
+        padding-left: 5px;
+        overflow: hidden;/*щоб обрізалася, якщо не влазить*/
+        transition: 0.3s; 
+        display: inline-block;
+        
+        /*justify-content: center;*/
+    }
+   
+    .icons_box7 .iteam_7 img:hover{
+       color: yellow;
+       
+   }
+    .title_box7 .items_box7 .block7_items1 .icons_box7 img:hover{
+        color: yellow;
+    }
+    /*block7*/
+    /*block8*/
+    .block8{
+        background: url(../img/black-box8.jpg) no-repeat;
+        margin-top: 100px;
+        
+    }
+    .title_box8 h2{
+        font-size: 51px;
+        text-align: center;
+        color: white;
+        font-family: 'vidaloka_regular';
+        padding-top: 150px;
+
+    }
+    .title_box8 p{
+        font-size: 16px;
+        text-align: center;
+        color: #969595;
+        font-family: 'vidaloka_regular';
+        padding-top: 50px;
+    }
+    .input_box8{
+        position: relative;   /*щоб label засунути в input*/
+        padding-top: 60px;
+       padding-bottom: 100px;
+      
+       width: 460px;
+       height: 50px;
+       
+    }
+    .input_box8 input{
+        position: absolute;/**/
+        width: 460px;
+        height: 50px;
+        outline: none;
+        border:#969595 1px solid;
+        color: white;/*для placeholder не працює*/
+        opacity:0.1;
+        z-index: 1;
+        
+    }
+    .input_box8 label{
+        position: absolute;
+        font-size: 16px;
+        color: white;
+        font-family: 'vidaloka_regular';
+        padding-left: 20px;
+        padding-top: 12px;
+        transition: 3s;
+        
+    }
+    /*.input_box8 input{
+        width: 460px;
+        height: 50px;
+        outline: none;
+        border:#969595 1px solid;
+        opacity:0.1;
+        font-size: 16px;
+        color: white;
+        font-family: 'vidaloka_regular';
+        padding-left: 20px;
+        
+        transition: 3s; 
+    }*/
+    .button_box8{  
+        padding-top: 60px;
+        padding-bottom: 100px;
+        width: 140px;
+        height: 50px;
+    }
+    .btn_box8 {
+        background-color: yellow;
+        width: 140px;
+        height: 50px;
+        outline: none;
+        border: none;
+        font-family: 'vidaloka_regular';
+        text-align: center;
+        color:black;
+        display: block;
+        outline: none;
+        transition: 3s;
+        margin-bottom: 100px;
+    }
+    .input_box8 input:hover{
+        box-shadow:10px 10px 20px #000 ;
+        
+    }
+    .button_box8:hover{
+        box-shadow:10px 10px 5px #000 ;
+    }
+    /*block8*/
+    /*block9*/
+    .block9{
+        background: url(../img/black-blox9.jpg);
+    }
+    .logo-box9{
+        padding-top: 50px;
+        display:flex;/*щоб постаити картинку по центрі*/
+        justify-content: center;/*щоб постаити картинку по центрі*/
+        
+    }
+    .logo-box9 img{
+
+margin:0 auto;/*щоб постаити картинку по центрі*/
+    }
+    
+    .text-box9 h2{
+        text-align: center;
+        font-size: 16px;
+        text-align: center;
+        color:white;
+        font-family: 'vidaloka_regular';
+        padding-top: 40px;
+        display:flex;/*щоб постаити картинку по центрі*/
+        justify-content: center;/*щоб постаити картинку по центрі*/
+
+    }
+    .icons_box9 {
+        display:flex;/*щоб постаити картинку по центрі*/
+        justify-content: center;/*щоб постаити картинку по центрі*/
+        
+        padding-bottom: 50px;
+        padding-top: 40px;
+    }
+    .icons_box9 img{
+        display:flex;/*щоб постаити картинку по центрі*/
+        justify-content: center;/*щоб постаити картинку по центрі*/
+        
+        padding-right: 30px;
+        transition: 3s;
+        
+    }
+    .icons_box9 img:hover{
+        color: yellow;
+    }
+    /*block9*/
+   
+
+
+        
+    

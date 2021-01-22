@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event Handler</title>
+</head>
+
+<body>
+    використовується тільки під час кліку миші
+<h2>OnClick</h2>
+<button onClick="counterWatermelon()" value="Считать арбузы">Количество Арбузов</button>
+
+<script>
+function counterWatermelon(){
+	for(let i=1; i<3; i++){
+		document.write("Количество Арбузов:" + i);
+		}
+	}
+</script>
+
+Використовується під час кліку миші, ентер
+Викор OnChange Для отримання інф і зміни її
+<h2>OnChange</h2>
+<input type="text" onChange="alert(this.value)" />
+<input type="button" value="button"/>
+
+
+<h2>input</h2>
+<input type="text" id="input"  maxlength="10"/>oninput: <span id="result"></span>
+<input id="countSms" /> Количество символов подсчитать: <span id="result2"></span>
+<script>
+input.oninput = function(){ //oninput обращєнія до input і через це можемо писати input.oninput
+	result.innerHTML = input.value; // результат має вивести.innerHTML  у value робота на батн 
+	}
+	
+function ShowCount(){
+	 result2.innerHTML = countSms.value.length; // вивести у value і порахувати
+	}
+	
+countSms.onkeyup = countSms.oninput = ShowCount;//привязуємося до параметру ф-ції ShowCount 
+countSms.onropertychange = function(){
+     if(event.propertyName == "value")ShowCount();//срочно получити значення
+     /*Обєкт-event - можемо його прописувати коли хочемо зробити звернення дл собитія */
+	}
+countSms.oncut = function(){
+	setTimeout(ShowCount, 0);
+    }
+    //onkeyup -собитія
+// функції без іменні назив анонімні
+//propertyName - событие отслеживания изменения свойств, используется для мгновенной реакции
+</script>
+</body>
+</html>

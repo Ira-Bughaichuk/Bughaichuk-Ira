@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>validate form</title>
+</head>
+Будемо провіряти дані і якщо є помилки будемо виводити на екран
+<body>
+<form class="formWidthValidation">
+<div>
+        <div><label>From:</label></div>
+        <div><input type="text" class="from field" /></div>
+</div>
+
+ <div>
+        <div><label>Password:</label></div>
+        <div><input type="password" class="password field" /></div>
+</div>
+
+ <div>
+        <div><label>Password confirmation:</label></div>
+        <div><input type="password" class="passwordConfirmation field" /></div>
+</div>
+
+ <div>
+        <div><label>Where:</label></div>
+        <div>
+            <select class="where field">
+                <option></option>
+                <option value="developers">Developers</option>
+                <option value="manager">Manager</option>
+                <option value="devops">Devops</option>
+            </select>
+        </div>
+</div>
+
+ <div>
+        <div><label>Message:</label></div>
+        <div><textarea class="message field"></textarea></div>
+</div>
+<input type="submit" class="validateBtn" value="Vaidate" />
+</form>
+</body>
+<script>
+// let validateBtn = document.querySelector(".formWidthValidation .validateBtn");//через радітєля обращаємося до кнопки. В скороченному вигляді те саме що і 47 48 строка
+//тепер можемо обращатися до цеї перемінної validateBtn як до кнопки
+	let form = document.querySelector(".formWidthValidation");
+	let validateBtn = document.querySelector(".validateBtn");
+	let from = form.querySelector(".from");
+	let password = form.querySelector(".password");
+	let passwordConfirmation = form.querySelector(".passwordConfirmation");
+	let where = form.querySelector(".where");
+	let message = form.querySelector(".message");
+	let fields = form.querySelector("fields");
+
+	// треба повісти Event на submit-кнопку і фому, щоб при нажиманні на ентер будь-яке поле вводу проходити клік і валідейт
+/*  form.addEventListener('submit', function(){// вказуємо не Click a события -submit
+	  event.preventDefault();////event.preventDefault()-заприщаэмо клыкнути щоб сторынка перезагружалася, ы можемо подивитися в консолы собитыя
+	  console.log("click on validate");
+	  console.log("from:" , from.value);
+	  console.log("password:" , password.value);
+	  console.log("passwordConfirmation:" , passwordConfirmation.value);
+	  console.log("where:" , where.value);
+	  console.log("message:" , message.value);
+	  });
+	  */
+
+	  //одним циклом провырити заповнене поле чи ны
+	 form.addEventListener ("submit", function(event){
+		 event.preventDefault();
+		 
+		 for(let i =0; i<fields.length; i++){
+			 if(!fields[i].value){
+				 console.log('field is blank', fields[i]);
+				 let error = document.createElement('div');
+				 error.className="error";
+				 error.style.color="red";
+				 error.innerHTML = "Cnnot be blank";
+				 form.parentElement.insertBefore(error, fields[i]);
+				 }
+			 }
+		 });
+</script>
+</html>

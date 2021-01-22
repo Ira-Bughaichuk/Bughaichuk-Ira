@@ -39,11 +39,13 @@
         <label id="lab2"></label>
         <input id="email" type="email" name="email" placeholder="E-mail">
         <label id="lab3"></label>
+        <div id="resault"></div>
         
         <button type="button" onclick="eror">open</button>
     </form>
 </body>
 <script>
+/*Дз31-Создать форму имя, фамилия, email. Если не водят имя и фамилию вывести ошибку под каждый input в документ. (Введите Имя , Введите Фамилию) */
   function eror(){
 
       let text, message;
@@ -52,14 +54,19 @@
       text = document.getElementById("name").value;
 
       try{
-          if(text=="")throw "";
-          if(isNaN(text)) throw "";
-          text=toString;
+          if(text=="")throw "Введите имя";
+
+          if(message=="")throw "Введите E-mail";
+          
 
       }
-  
-
-
+      catch(eror){
+          message.innerHTML = eror;
+      }
+      finally{
+          document.getElementById("resault").value = text + " " + message;
+        
+          }
   }
 </script>
 </html>

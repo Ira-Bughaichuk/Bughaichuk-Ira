@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event Handler</title>
+</head>
+
+<body>
+<h2>OnClick</h2>
+<button onClick="counterWatermelon()" value="Считать арбузы">Количество Арбузов</button>
+
+<script>
+function counterWatermelon(){
+	for(let i=1; i<3; i++){
+		document.write("Количество Арбузов:" + i);
+		}
+	}
+</script>
+<h2>OnChange</h2>
+<input type="text" onChange="alert(this.value)" />
+<input type="button" value="button"/>
+<h2>input</h2>
+<input type="text" id="input"  maxlength="10"/>oninput: <span id="result"></span>
+<input id="countSms" /> Количество символов подсчитать: <span id="result2"></span>
+<script>
+input.oninput = function(){
+	result.innerHTML = input.value;
+	}
+	
+function ShowCount(){
+	 result2.innerHTML = countSms.value.length;
+	}
+	
+countSms.onkeyup = countSms.oninput = ShowCount;
+countSms.onropertychange = function(){
+	 if(event.propertyName == "value")ShowCount();
+	}
+countSms.oncut = function(){
+	setTimeout(ShowCount, 0);
+	}
+//propertyName - событие отслеживания изменения свойств, используется для мгновенной реакции
+</script>
+</body>
+</html>

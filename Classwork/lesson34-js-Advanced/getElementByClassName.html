@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementByClassName</title>
+</head>
+
+<body>
+<div class="one_class">Lorem ipsum dolar</div>
+<div class="one_class_two_class">Lorem ipsum dolar</div>
+<button onClick="changeColor('blue')">Нажми получишь синий цвет</button>
+<button onClick="changeColor('red')">Нажми получишь красный цвет</button>
+</body>
+<script>
+ function changeColor(newColor){
+	  let color_red = document.getElementsByClassName("one_class");
+	  let color_blue = document.getElementsByClassName("one_class_two_class");
+	  color_red[0].style.color = newColor;// звертаємося до псевдо-масива і привязуємо color_red до newColor
+	  color_blue[0].style.color = newColor;
+     }
+     //0-30-00
+     //параметр буде оприділятися при нажатті на кнопку а не по функції
+     //визивати параметр який нам треба по кнопці
+</script>
+</html>
