@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>createTime</title>
+</head>
+
+<body>
+<p id="date"></p>
+</body>
+<script>
+    //створення часыв
+   // це функція виконує опридільону дію заданим проміжутком часу необхідну кількість раз 
+    setInterval(function(){
+        var date = new Date(); //створюємо обєкт Date у якому знаходяться всі необхідні дані для формування таймера 
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        var time = hours + ":" + minutes + ":" + seconds;
+    
+        document.getElementById("date").innerHTML = time;
+    },1000) //частота змыни 
+
+</script>
+</html>

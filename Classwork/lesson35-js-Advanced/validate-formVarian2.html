@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validate-form-Variant2</title>
+</head>
+
+<body>
+<form action="" onsubmit="return validate();">
+    <input type="text" id="userName">
+    <input type="password" id="userPassword">
+
+    <button type="submit">Отправить</button>
+</form>
+</body>
+<script>
+    //Валідація форми це провірка користувацьких даних які ми вводимо в поле вводу
+    //валідація повинна бути на стороні клієнта це те що ми робимо на JS і на стороні сервера тобто коли JS відключений  
+   function validate() {
+       //створили 2 переміні
+
+       var userName = document.getElementById("userName");
+       var userPassword = document.getElementById("userPassword");
+
+
+       event.preventDefault();// запобігти дію за замовчуванням тобто не буде перезагрузки, не буде відправляти на сервер
+       // 
+      
+       //будемо провіряти значення полів 
+       // в userName визиваю свойство value
+        if(!userName.value){// якщо в userName  value ніяке не прийшло(пусте ) 
+        userName.style.border = "2px solid red";// то тоді userName обробляю через  
+        return false;//я знаю що данні не прийшли то треба тут же перервати функцію 
+    }
+
+    //так само для userPassword
+    if(!userPassword.value){
+        userPassword.style.border = "2px solid red"; 
+        return false;
+    }
+        //якщо все ок то треба 
+        return true;
+}
+   
+</script>
+</html>

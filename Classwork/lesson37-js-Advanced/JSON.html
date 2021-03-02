@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON</title>
+</head>
+
+<body>
+<script>
+	// текстовий формат 
+	//має 2 напрямки: перевод строки в обєкт(парсінг) і навпаки
+//строка JSON
+  /*   let jsonPerson = '{"name:"Maryna", "age": 28}';
+	 
+	 //если это объект
+	 let person ={
+		 name: "Maryna",
+		 age: 28
+		 }*/
+		 
+		// то что можем получать ключи значения  JSON один із формата string, nember, object, true, false, null, Date
+		
+/*let twoPersone = '{
+	"name": "Maryna",
+	"age" : 28,
+	"mother":{
+		"name": "Svetlana",
+	     "age" : 58,
+		},
+	"children":[
+	  "Emma",
+	  "Dima",
+	  "Olga"
+	],
+	 "cat": true,
+	 "dog": null
+	}';*/
+	
+	//пиклади парсінга 
+	//let persone = eval ('('+resoneData')'); используем в редком случае и аккуратно (для парсінга в JSON )
+	//самий ефективний метод - JSON.parse
+	//let person = JSON.parse(personeData); - парс из 	JSON переводим в оъект(parse) (для парсінга в JSON )
+	//let personString = JSON.striglify(person)- из объекта обратно в JSON(striglify)
+	
+	
+	let personFamaly = '{"name" : "Maryna", "age": 28, "mother":{"name":"Svetlana", "age": 58}, "children":["Emma","Dima","Olga"], "cat": true, "dog": null}';
+let person = JSON.parse(personFamaly);// після цього отримали у форматі обєкта 
+console.log(person);
+//cw37 вивести обэктом всю инф
+let information = document.getElementById("demo").innerHTML= person.name + ' ' + person.age + ' ' + person.mother.name + ' ' + person.mother.age + ' ' + person.children + ' ' + person.cat + ' ' + person.dog;
+</script>
+<div id="demo"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event Target</title>
+</head>
+
+<body>
+<div>
+    Знаходимо перший елемент в документі
+    <span>Спан</span>
+    <p>Параграф</p>
+    <button>Кнопка</button>
+</div>
+
+<script>
+    //Target обєкт евента. евент силається на обєкт.
+  const div = document.querySelector("div");
+  div.addEventListener("click", showTargets);//силаємося на оброботчик собитія -addEventListener, викор собитія клік,
+    function showTargets (event){
+		 console.log("div currentTarget", event.currentTarget);//виводимо в консоль свойство currentTarget
+		  console.log("div Target", event.target);//виводимо в консоль свойство Target
+        }
+
+        //
+        //currentTarget- силається на те що визивали("div") і все що усередині поміщене. починає шукати з радітєля тобто дів
+        //Target- силається на окремий елемент, тобто на дію яка відбувається. відразу знаходить кнопку. працює з обработчиком
+</script>
+</body>
+</html>

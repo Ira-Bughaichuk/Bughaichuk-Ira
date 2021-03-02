@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OnLoad</title>
+</head>
+
+<body onLoad="ChecCook()">
+  <div id="test"></div>
+  <script>
+  function ChecCook(){
+	  let text = " ";
+	  if(navigator.cookieEnabled == true){
+		  text = "Cookie are Enabled";
+		  }else{
+			  text = "Cookie are not Enabled";
+			  }
+	  document.getElementById("test").innerHTML=text;
+	  }
+  </script>
+</body>
+</html>

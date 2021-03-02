@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>stopPropagnatio</title>
+</head>
+<style>
+#green{
+	width:300px;
+	height:300px;
+	background:green;
+	margin:0 auto;
+	}
+#blue{
+	width:200px;
+	height:200px;
+	background:blue;
+	    margin: 0 auto;
+	}
+#red{
+	width:100px;
+	height:100px;
+	background:red;
+	    margin: 0 auto;
+	}
+</style>
+<body>
+<div id="green" onClick="alert('зеленый');">
+   <div id="blue" onClick="alert('голубой'); event.stopPropagation();">
+        <div id="red" onClick="alert('красный');"></div>
+   </div>
+</div>
+</body>
+</html>

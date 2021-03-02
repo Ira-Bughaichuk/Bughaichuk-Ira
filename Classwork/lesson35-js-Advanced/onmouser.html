@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouser</title>
+</head>
+<style>
+#pic{
+	width:400px;
+	height:auto;
+	}
+#holder{
+	position:absolute;
+	top:90px;
+	left:300px;
+	width:400px;
+	height:400px;
+	padding:10px;
+	border:6px solid #15141E;
+	box-shadow:0 0 26px rgba(32,30,30,0.7);
+	display:none;
+	}
+#imgContainer{
+	width:250px;
+	padding:10px;
+	border:3px solid #ccc;
+	margin:20px 0;
+	}
+#imgContainer img{
+	width:100px;
+	border:1px solid #ddd;
+	cursor:pointer;
+	padding:5px;
+	margin:5px;
+	}
+</style>
+<body>
+<h2>onnouseover</h2>
+<p onMouseOver="this.style.color='red' " onMouseOut="this.style.color='black' ">Наведите на текст и он станет красным, а потом станет черной</p>
+
+
+<img src="images/boat.jpg" alt="boat" title="boat" id="pic" />
+<script>
+// для img src="images/boat.jpg при наведені зміннюються картинки
+pic.onmouseover = function(){
+	this.src = "images/boat_two.jpeg";
+	this.alt = this.title = "Two Boat";
+	}
+	
+pic.onmouseout= function(){
+	this.src = "images/boat.jpg";
+	this.alt = this.title = "One Boat";
+	}
+</script>
+
+
+
+<div id="imgContainer">
+        <img src="images/cofe1.jpg" />
+        <img src="images/cofe2.jpeg" />
+        <img src="images/cofe3.jpeg" />
+        <img src="images/cofe4.jpeg" />
+</div>
+<div id="holder"></div>
+<script>
+ //для 3 завдання: при наведені на  фото отримуємо в консоль фото    
+let holder = document.getElementById("holder");
+let imgContainer = document.getElementById("imgContainer");
+
+imgContainer.addEventListener('mouseover', function(event){
+	 let target = event.target;// викор для того щоб оприділити цільовий обєкт тега а
+	 console.log(target.tagName);
+	 if(target.tagName != "img") holder.style.display="none";// між дівами є відступ через це треба врахувати if
+	 else{
+		 holder.style.backgroundImage="url" + target.src + ")";
+		 holder.style.display="block";
+		 }
+	});
+	
+imgContainer.addEventListener("mouseout", function(){
+	holder.style.display="none";
+});
+</script>
+</body>
+
+</html>

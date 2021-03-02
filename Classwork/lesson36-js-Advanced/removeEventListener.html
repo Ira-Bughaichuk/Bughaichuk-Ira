@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>removeEventListener</title>
+</head>
+
+<body>
+<div id="test">
+Lorem ipsum dolar lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar.
+<button onClick="removeHadler()">Остановить событие</button>
+</div>
+
+<p>Lorem ipsum dolar lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar  lorem ipsum dolar.</p>
+<div id="demo"></div>
+</body>
+<script>
+document.getElementById("test").addEventListener("mousemove", myFunction);
+
+function myFunction(){
+	document.getElementById("demo").innerHTML = Math.random();
+	}
+
+function removeHadler(){
+	document.getElementById("test").removeEventListener("mousemove", myFunction);
+	}
+</script>
+</html>

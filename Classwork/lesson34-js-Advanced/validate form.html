@@ -66,8 +66,13 @@
 	  */
 
 	  //одним циклом провырити заповнене поле чи ны
-	 form.addEventListener ("submit", function(event){
+	 /*form.addEventListener ("submit", function(event){
 		 event.preventDefault();
+
+		 let errors = form.querySelectorAll('.error');
+	     for (let i = 0; i < errors.length; i++) {
+			  errors[i].remove();
+			 }
 		 
 		 for(let i =0; i<fields.length; i++){
 			 if(!fields[i].value){
@@ -79,6 +84,61 @@
 				 form.parentElement.insertBefore(error, fields[i]);
 				 }
 			 }
-		 });
+			 if (password.value !== passwordConfirmation.value) {
+			console.log('not equals');
+			let error = document.createElement('div');
+			error.className="error";
+		   error.style.color="red";
+		   error.innerHTML = "Password doesnt match";
+		  password.parentElement.insertBefore(error, password);
+		  }
+	});*/
+	    
+		
+		
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  removeValidation();
+
+  checkFieldsPresence();
+
+  checkPasswordMatch();
+});
+
+let checkPasswordMatch = function () {
+  if (password.value !== passwordConfirmation.value) {
+    console.log('not equals');
+    let error = generateError('Password doesnt match');
+    console.log(error);
+    password.parentElement.insertBefore(error, password);
+  }
+}
+
+let checkFieldsPresence = function () {
+  for (let i = 0; i < fields.length; i++) {
+    if (!fields[i].value) {
+      console.log('field is blank', fields[i]);
+      let error = generateError('Cant be blank');
+      form[i].parentElement.insertBefore(error, fields[i]);
+    }
+  }
+}
+
+let removeValidation = function () {
+  let errors = form.querySelectorAll('.error');
+
+  for (let i = 0; i < errors.length; i++) {
+    errors[i].remove();
+  }
+}
+
+let generateError = function (text) {
+  let error = document.createElement('div');
+  error.className = 'error';
+  error.style.color = 'red';
+  error.innerHTML = text;
+  return error;
+}
 </script>
 </html>

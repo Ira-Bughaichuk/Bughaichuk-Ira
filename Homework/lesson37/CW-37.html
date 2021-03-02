@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CW-37</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    </body>
+<script>
+
+let personFamaly = '{"name" : "Maryna", "age": 28, "mother":{"name":"Svetlana", "age": 58}, "children":["Emma","Dima","Olga"], "cat": true, "dog": null}';
+let person = JSON.parse(personFamaly);// після цього отримали у форматі обєкта 
+console.log(person);
+//cw37 вивести обэктом всю инф
+let information = document.getElementById("demo").innerHTML= person.name + '' + person.age + '' + person.mother.name + '' + person.mother.age + '' + person.children + '' + person.cat + '' + person.dog;
+</script>
+
+</html>

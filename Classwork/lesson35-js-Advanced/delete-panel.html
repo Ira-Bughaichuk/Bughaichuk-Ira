@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>delete-panel</title>
+</head>
+<style>
+body {
+  margin: 10px auto;
+  width: 470px;
+}
+
+h3 {
+  margin: 0;
+  padding-bottom: .3em;
+  font-size: 1.1em;
+  color:#1758B3;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 .5em;
+}
+
+.pane {
+  background: #edf5e1;
+  padding: 10px 20px 10px;
+  border-top: solid 2px #c4df9b;
+}
+
+.remove-button {
+  font-size: 110%;
+  color: #000;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline:none;
+  float:right; 
+}
+.remove-button:hover{
+	color:#173DD3;
+	}
+</style>
+<body>
+
+  <div>
+    <div class="pane">
+      <h3>Мобильный телефон Huawei P30 Lite 4/128GB Peacock Blue</h3>
+      <p>Экран (6.15", LTPS, 2312x1080)/ HiSilicon Kirin 710 (4 x 2.2 ГГц + 4 x 1.7 ГГц)/ тройная основная камера: 48 Мп + 8 Мп + 2 Мп, фронтальная камера: 24 Мп/ RAM 4 ГБ/ 128 ГБ встроенной памяти + microSD (до 512 ГБ)/ 3G/ LTE/ GPS/ GLONASS/ BDS/ поддержка 2х SIM-карт (Nano-SIM)/ Android 9.0 (EMUI 9.0.1)/ 3340 мА*ч lorem ipsum</p>
+    </div>
+    <div class="pane">
+      <h3>Мобильный телефон Samsung Galaxy M21 4/64GB Black (SM-M215FZKUSEK)</h3>
+      <p>Экран (6.4", Super AMOLED, 2340х1080) / Samsung Exynos 9611 (4 x 2.3 ГГц + 4 x 1.7 ГГц) / тройная основная камера: 48 Мп + 8 Мп + 5 Мп, фронтальная 20 Мп / RAM 4 ГБ / 64 ГБ встроенной памяти + microSD (до 512 ГБ) / 3G / LTE / GPS / поддержка 2х SIM-карт (Nano-SIM) / Android 10 (Q) / 6000 мА*ч</p>
+    </div>
+    <div class="pane">
+      <h3>Мобильный телефон Apple iPhone 11 Pro 64GB Space Gray Официальная гарантия</h3>
+      <p>Экран (5.8", OLED (Super Retina XDR), 2436x1125) / Apple A13 Bionic / основная тройная камера: 12 Мп + 12 Мп + 12 Мп, фронтальная камера: 12 Мп / RAM 4 ГБ / 64 ГБ встроенной памяти / 3G / LTE / GPS / ГЛОНАСС / Nano-SIM / iOS 13</p>
+    </div>
+  </div>
+
+
+  <script>
+    let panes = document.querySelectorAll('.pane');
+
+    for(let pane of panes) {
+      pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+      // кнопка становится первым потомком плитки (pane)
+      pane.firstChild.onclick = () => pane.remove();
+    }
+  </script>
+
+</body>
+</html>

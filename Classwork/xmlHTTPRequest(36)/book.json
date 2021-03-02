@@ -1,0 +1,6 @@
+"books": [
+			{"lastname":"Шевченко", "firstname":"Тарас", "namebook": "Кобзар"},
+			{"lastname":"Митчелл", "firstname":"Маргарет", "namebook": "Унесеные ветром"},
+			{"lastname":"Кафка", "firstname":"Франц", "namebook": "Процесс"},
+			{"lastname":"Кинг", "firstname":"Стивен", "namebook": "Кладбище Домашних Животных"},
+]

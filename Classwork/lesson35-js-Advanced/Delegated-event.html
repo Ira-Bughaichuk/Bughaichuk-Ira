@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delegated event</title>
+</head>
+<style>
+  #bag-table th{
+	  text-align:center;
+	  font-weight:bold;
+	  }
+#bag-table td{
+	 width:150px;
+	 white-space:nowrap;
+	 text-align:center;
+	 vertical-align:bottom;
+	 padding-top:5px;
+	 padding-bottom:12px;
+		  }
+#bag-table .nw{
+	background:#D54BBD;
+	}
+#bag-table .n{
+	background:#21D8DF;
+	}
+#bag-table .ne{
+	background:#97AF26;
+	}
+#bag-table .w{
+	background:#D53865;
+	}
+#bag-table .c{
+	background:#E9AA73;
+	}
+#bag-table .e{
+	background:#1533CD;
+	}
+#bag-table .sw{
+	background:#45C025;
+	}
+#bag-table .s{
+	background:#889595;
+	}
+#bag-table .se{
+	background:#594A4D;
+	}
+#bag-table .high{
+	background:#E54011;
+	}
+</style>
+<body>
+<table id="bag-table">
+ <tr>
+ <th colspan="3">Квадрат Направления:</th>
+ </tr>
+ 
+ <tr>
+  <td class="nw">
+      Салатовый<br />
+      Круглый<br />
+      Рамка<br />
+  </td>
+  <td class="n">
+       Фиолетовый<br />
+      Квадратный<br />
+      Border<br />
+  </td>
+   <td class="ne">
+       Розовый<br />
+      Треугольник<br />
+      Рамка<br />
+  </td>
+ </tr>
+ 
+ 
+ <tr>
+  <td class="w">
+    Собака<br />
+    Шерсть<br />
+    Лает<br />
+  </td>
+  <td class="c">
+     Кошка<br />
+     Царапает<br />
+     Мяучит<br />
+  </td>
+   <td class="e">
+     Тигр<br />
+     Опасен<br />
+     Быстрый<br />
+  </td>
+ </tr>
+ 
+ 
+  <tr>
+  <td class="sw">
+       Квартира<br />
+       Большая<br />
+       Уют<br />
+  </td>
+  <td class="s">
+       Машина<br />
+       комфорт<br />
+       Удобство<br />
+  </td>
+   <td class="se">
+       Частный дом<br />
+       сад<br />
+       бассейн<br />
+  </td>
+ </tr>
+ 
+ 
+</table>
+
+<button>Поменять цвет</button>
+<script>
+///////////////////////////////////
+let btn = document.querySelector('button');
+function random(number){
+	 return Math.floor(Math.random()*(number+1));
+	}
+btn.onclick = function(){
+	 let rgbColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+	 document.body.style.backgroundColor = rgbColor;
+	}
+///////////////////////////////////
+   let table = document.getElementById('bag-table');
+   let selectedTd;
+   
+   table.onclick = function(event){
+	    let target = event.target;
+		
+		while (target != this){
+			 if(target.tagName == 'TD'){
+				 high(target);
+				 return;
+				 }
+				 target = target.parentNode; 
+			}
+	   }
+	   
+	  function high(node){
+		  if(selectedTd){
+			  selectedTd.classList.remove('high');
+			  }
+			 selectedTd = node;
+			 selectedTd.classList.add('high');  
+		  }
+</script>
+</body>
+</html>
